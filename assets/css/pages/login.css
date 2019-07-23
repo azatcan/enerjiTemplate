@@ -13,6 +13,10 @@ body{
 }
 
 img{
-
     object-fit: cover;
+}
+
+
+*{
+    overflow: hidden;
 }
