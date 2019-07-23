@@ -11,3 +11,8 @@ body{
     background: #1400c8;
     background: linear-gradient(90deg, rgba(20, 0, 200, 1) 0%, rgba(185, 0, 180, 1) 100%);
 }
+
+img{
+
+    object-fit: cover;
+}
