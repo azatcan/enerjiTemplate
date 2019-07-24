@@ -1,3 +1,80 @@
+body {
+    background: #f4f6f9;
+    height: 100%;
+    width: 100%;
+}
+
+.active-sidebar{
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    left: 0 !important;
+}
+
+.side-bar {
+    position: fixed;
+    height: 100%;
+    background: #ffffff;
+    width: 300px;
+    left: -300px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.logo-container {
+    width: 100%;
+    max-height: 100px;
+}
+
+.logo-container>img {
+    padding: 25px;
+}
+
+.menu-container {}
+
+.menu-list {
+    list-style-type: none;
+    padding-left: 0;
+    padding-top: 10%;
+}
+
+.menu-list>li {
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    padding-left: 10%;
+    display: flex;
+    align-items: center;
+    font-size: 1rem
+
+}
+
+.menu-list>li>i {
+    margin-right: 12px; 
+    font-size: 1.2rem;
+}
+
+.menu-list a {
+    color: #231f20;
+    
+}
+
+.menu-list .active,
+.menu-list .active > a {
+    color: #66bb6a !important;
+}
+
+.menu-list .active{
+    border-left: #66bb6a 5px solid;
+}
+.active i{
+    margin-left: -5px;
+}
+
 .menu-bar {
     position: absolute;
     height: 100%;
@@ -11,11 +88,11 @@
     margin-left: 4px;
 }
 
-#toggleMenu{
+#toggleMenu {
     padding: 5px 10px !important;
 }
 
-.nav-logo{
+.nav-logo {
     width: 230px;
     white-space: unset;
     font-size: small;
@@ -31,6 +108,33 @@
 .line-unset {
     line-height: unset !important;
 }
+
+.menu-toggle-button {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 1;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+}
+
+main{
+    margin-left: 300px;
+}
+
+.header {
+    margin-left: 350px;
+    height: 100px;
+}
+
+
+.notification-box{
+    display: none;
+}
+
+
+
+/* ---------------------------------------------------------------- önceki css */
 
 @keyframes swing {
     0% {
@@ -418,7 +522,7 @@ body {
         padding-left: 0px;
         padding-top: 20px;
         margin-top: 72px;
-    
+
     }
 }
 
@@ -439,16 +543,17 @@ body {
     margin-top: -20px;
     margin-left: -20px;
 }
-.page-title::after{
-     content: '';
-     position: relative;
-     width: 80vw;
-     height: 1px;
-     left: 0;
-     display: block;
-     margin-top: 16px;
-     clear: both;
-     background-color: grey;
+
+.page-title::after {
+    content: '';
+    position: relative;
+    width: 80vw;
+    height: 1px;
+    left: 0;
+    display: block;
+    margin-top: 16px;
+    clear: both;
+    background-color: grey;
 }
 
 /*------scroll bar---------------------*/

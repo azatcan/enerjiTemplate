@@ -26,3 +26,12 @@ jQuery(function ($) {
         $(".page-wrapper").toggleClass("toggled");
     });
 });
+
+$("#sidebarToggleButton").on("click", function () {
+        
+    if ($("#sideBarContainer").hasClass("active-sidebar")) {
+        $("#sideBarContainer").removeClass("active-sidebar");
+    } else {
+        $("#sideBarContainer").addClass("active-sidebar");
+    }
+});
