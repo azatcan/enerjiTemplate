@@ -11,6 +11,10 @@
     margin-left: 4px;
 }
 
+#toggleMenu{
+    padding: 5px 10px !important;
+}
+
 .lbl {
     /* padding: 8px; */
     padding: 0 4px 0 4px;
