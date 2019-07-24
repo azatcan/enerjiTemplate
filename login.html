@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,16 @@
 
     <!-- style -->
 
-    <link rel="stylesheet" href="./assets/components/fontawesome-5.9.0/css/all.min.css">
+    <!-- Font awesome -->
+    <!-- <link rel="stylesheet" href="./assets/components/fontawesome-5.9.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="./assets/components/fontawesome-pro-5.8.2/css/all.min.css">
 
     <link rel="stylesheet" href="./assets/components/bootstrap-4.3.1/css/bootstrap.min.css">
 
     <!-- Material Css -->
+    <!-- <link rel="stylesheet" href="./assets/components/mdb-v4.5.6/static/css/mdb.min.css"> -->
     <link rel="stylesheet" href="./assets/components/mdb-v4.8.7/css/mdb.min.css">
+    <link rel="stylesheet" href="./assets/components/mdb-v4.8.7/css/style.css">
 
     <link rel="stylesheet" href="./assets/css/core.css">
 
@@ -22,94 +27,87 @@
     <!-- style -->
 
 </head>
+
 <body>
-<div class="row overflow-hidden h-100 p-0">
-    <div class="col-md-6 p-0 d-flex align-items-center justify-content-center">
-        <form action="index.html" class="col-6 form-group d-flex flex-column">
-            <!-- Material form login -->
-            <div class="card">
+    <div class="row h-100 p-0">
+        <div class="col-md-6 p-0 d-flex flex-column align-items-center justify-content-center">
+            <div class="col-md-10 p-5">
+                <div class="row mt-5 mb-5">
+                    <img class="mb-3" src="assets/images/logo-yan.png" height="100" alt="">
 
-                <h5 class="card-header info-color white-text text-center py-4">
-                    <strong>Sign in</strong>
-                </h5>
-
-                <!--Card content-->
-                <div class="card-body px-lg-5 pt-0">
-
-                    <!-- Form -->
-                    <form class="text-center" style="color: #757575;" action="#!">
-
-                        <!-- Email -->
+                </div>
+                <div class="row">
+                    <h1 class="font-weight-bold mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+                </div>
+                <div class="row">
+                    <form action="index.html" class="col-12">
                         <div class="md-form">
-                            <input type="email" id="materialLoginFormEmail" class="form-control">
-                            <label for="materialLoginFormEmail">E-mail</label>
+                            <i class="far fa-user prefix"></i>
+                            <label for="">User Name</label>
+                            <input class="form-control mb-3" type="text">
                         </div>
-
-                        <!-- Password -->
                         <div class="md-form">
-                            <input type="password" id="materialLoginFormPassword" class="form-control">
-                            <label for="materialLoginFormPassword">Password</label>
+                            <i class="far fa-lock prefix"></i>
+                            <label for="">Password</label>
+                            <input class="form-control mb-3" type="text">
                         </div>
-
-
-                        <!-- Sign in button -->
-                        <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
+                        <div>
+                            <button type="submit" class="btn btn-success">Gönder</button>
+                        </div>
                     </form>
-                    <!-- Form -->
-
                 </div>
 
             </div>
-            <!-- Material form login -->
-        </form>
-    </div>
-    <div class="col-md-6 d-none d-md-block p-0 h-100">
-        <div id="carouselExampleControls" class="carousel slide h-100" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            </ol>
-            <div class="carousel-inner h-100">
-                <div class="carousel-item active h-100">
-                    <img class="d-block w-100 h-100" src="./assets/images/login/wallhaven-lqdwop.jpg" alt="Second slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Anket Sonuçalrı</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt molestiae, recusandae excepturi officiis unde eos illo qui vero vel laborum similique magnam sequi repudiandae. Accusamus
-                            corrupti officia praesentium alias blanditiis.</p>
+        </div>
+        <div class="col-md-6 d-none d-md-block p-0 h-100">
+            <div id="carouselExampleControls" class="carousel slide h-100" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item active h-100">
+                        <img class="d-block w-100 h-100" src="./assets/images/login/wallhaven-lqdwop.jpg" alt="Second slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Anket Sonuçalrı</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt molestiae, recusandae excepturi officiis unde eos illo qui vero vel laborum similique magnam sequi repudiandae. Accusamus
+                                corrupti officia praesentium alias blanditiis.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img class="d-block h-100 w-100" src="./assets/images/login/wallhaven-43zpgv.jpg" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>İstatistik ve Hesaplama</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt molestiae, recusandae excepturi officiis unde eos illo qui vero vel laborum similique magnam sequi repudiandae. Accusamus
+                                corrupti officia praesentium alias blanditiis.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel-item h-100">
-                    <img class="d-block h-100 w-100" src="./assets/images/login/wallhaven-43zpgv.jpg" alt="First slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>İstatistik ve Hesaplama</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt molestiae, recusandae excepturi officiis unde eos illo qui vero vel laborum similique magnam sequi repudiandae. Accusamus
-                            corrupti officia praesentium alias blanditiis.</p>
-                    </div>
-                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
     </div>
-</div>
 
-<!-- JS Start -->
-<script src="./assets/components/jquery/jquery-3.4.1.min.js"></script>
+    <!-- JS Start -->
+    <script src="./assets/components/jquery/jquery-3.4.1.min.js"></script>
 
-<script src="./assets/components/popover/popover.js"></script>
+    <script src="./assets/components/popover/popover.js"></script>
 
-<script src="./assets/components/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+    <script src="./assets/components/bootstrap-4.3.1/js/bootstrap.min.js"></script>
 
-<!-- Material Css -->
-<script src="./assets/components/mdb-v4.8.7/js/mdb.min.js"></script>
+    <!-- Material Css -->
+    <!-- <script src="./assets/components/mdb-v4.5.6/static/js/mdb.min.js"></script> -->
+    <script src="./assets/components/mdb-v4.8.7/js/mdb.min.js"></script>
 
-<script src="./assets/js/core.js"></script>
-<!-- JS END -->
+    <script src="./assets/js/core.js"></script>
+    <!-- JS END -->
 </body>
+
 </html>
