@@ -38,9 +38,13 @@ $("#sidebarToggleButton").on("click", function () {
 
 $("#notificationBoxButton").on("click", function () {
     $(".notification-box").toggleClass("show");
-})
+});
 
 $('#drop').on("click", function () {
     $(this).parent().children(".drop").toggleClass("show");
     $(this).parent().children("i").toggleClass("fa-caret-right");
-})
+});
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+});

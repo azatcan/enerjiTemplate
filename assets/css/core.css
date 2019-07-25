@@ -20,6 +20,7 @@ body {
     background: #ffffff;
     width: 300px;
     left: -300px;
+    overflow-y: scroll;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
@@ -178,10 +179,11 @@ main {
     display: none;
     position: absolute;
     width: 300px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 1);
     border: rgb(187, 187, 187) 1px solid;
     border-radius: .8rem;
     right: 1rem;
+    z-index: 11;
 }
 
 .notification-box ul {
@@ -225,7 +227,13 @@ main {
     font-weight: bold;
 }
 
-
+.menu-group-title{
+    width: 100%;
+    background-color: #e2e3e4;
+    padding: 0.3rem 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 
 
 /* ---------------------------------------------------------------- önceki css */
