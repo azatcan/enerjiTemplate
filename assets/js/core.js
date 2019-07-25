@@ -29,9 +29,15 @@ jQuery(function ($) {
 
 $("#sidebarToggleButton").on("click", function () {
         
-    if ($("#sideBarContainer").hasClass("active-sidebar")) {
-        $("#sideBarContainer").removeClass("active-sidebar");
-    } else {
-        $("#sideBarContainer").addClass("active-sidebar");
-    }
+    $("#sideBarContainer").toggleClass("active-sidebar");
+    $('main').toggleClass("fill-screen");
+    $('.header').toggleClass("fill-screen");
 });
+
+$("#notificationBoxButton").on("click", function () {
+    $(".notification-box").toggleClass("show");
+})
+
+$('#drop').on("click", function () {
+    $(this).parent().children(".drop").toggleClass("show");
+})
