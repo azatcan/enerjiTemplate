@@ -40,4 +40,5 @@ $("#notificationBoxButton").on("click", function () {
 
 $('#drop').on("click", function () {
     $(this).parent().children(".drop").toggleClass("show");
+    $(this).parent().children("i").toggleClass("fa-caret-right");
 })
