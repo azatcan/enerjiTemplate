@@ -28,12 +28,10 @@ jQuery(function ($) {
 });
 
 $("#sidebarToggleButton").on("click", function () {
-
+        
     $("#sideBarContainer").toggleClass("active-sidebar");
     $('main').toggleClass("fill-screen");
     $('.header').toggleClass("fill-screen");
-    $('.menu-list label').toggleClass('hide-text');
-    $('.menu-list a').toggleClass('ml-4');
 });
 
 $("#notificationBoxButton").on("click", function () {

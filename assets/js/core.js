@@ -28,21 +28,36 @@ jQuery(function ($) {
 });
 
 $("#sidebarToggleButton").on("click", function () {
-        
+
     $("#sideBarContainer").toggleClass("active-sidebar");
     $('main').toggleClass("fill-screen");
     $('.header').toggleClass("fill-screen");
+    $('.menu-list label').toggleClass('hide-text');
+    $('.menu-list a').toggleClass('ml-4');
+
+    $("*.drop").removeClass("show");
+    $("*.menu-caret-icon").removeClass("fa-caret-right");
+
 });
 
 $("#notificationBoxButton").on("click", function () {
     $(".notification-box").toggleClass("show");
 });
 
-$('#drop').on("click", function () {
+$('.drop-menu').on("click", function () {
+
     $(this).parent().children(".drop").toggleClass("show");
     $(this).parent().children("i").toggleClass("fa-caret-right");
-});
 
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip()
+    // Menü kapalıyen açılma işlemi
+    if (!$("#sideBarContainer").hasClass("active-sidebar")) {
+        
+        $("#sideBarContainer").toggleClass("active-sidebar");
+        $('main').toggleClass("fill-screen");
+        $('.header').toggleClass("fill-screen");
+        $('.menu-list label').toggleClass('hide-text');
+        $('.menu-list a').toggleClass('ml-4');
+        
+    }
+
 });
