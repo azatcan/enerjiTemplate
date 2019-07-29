@@ -18,40 +18,6 @@ body {
     flex-direction: column;
 }
 
-@keyframes fadeout {
-    from {
-        display:flex;
-    }
-    to {
-        display: none;
-    }
-}
-@-moz-keyframes fadeout { /* Firefox */
-    from {
-        display:flex;;
-    }
-    to {
-        display: none;
-    }
-}
-@-webkit-keyframes fadeout { /* Safari and Chrome */
-    from {
-        display:flex;
-    }
-    to {
-        display: none;
-    }
-}
-@-o-keyframes fadeout { /* Opera */
-    from {
-        display:flex;
-    }
-    to {
-        display: none;
-    }
-}
-
-
 .logo-container {
     width: 100%;
     max-height: 100px;
@@ -60,8 +26,6 @@ body {
 .logo-container>img {
     padding: 25px;
 }
-
-.menu-container {}
 
 .menu-list {
     list-style-type: none;
