@@ -1,4 +1,4 @@
-$(window).on('load', function(){
+$(window).on('load', function () {
     $('.loader').slideUp()
 });
 
@@ -41,12 +41,12 @@ jQuery(function ($) {
 
 $(document).ready(function () {
     let menuStatus = localStorage.getItem("menuStatus");
-    if (menuStatus !== null){
+    if (menuStatus !== null) {
 
-        if (menuStatus !== "show"){
+        if (menuStatus !== "show") {
             $("#sideBarContainer").removeClass("active-sidebar");
             $('main').addClass("fill-screen");
-            $('.header').addClass("fill-screen");
+            $('.header').addClass("header-fill-screen");
             $('.menu-list label').addClass('hide-text');
             $('.menu-list a').addClass('ml-4');
 
@@ -56,7 +56,7 @@ $(document).ready(function () {
         } else {
             $("#sideBarContainer").addClass("active-sidebar");
             $('main').removeClass("fill-screen");
-            $('.header').removeClass("fill-screen");
+            $('.header').removeClass("header-fill-screen");
             $('.menu-list label').removeClass('hide-text');
             $('.menu-list a').removeClass('ml-4');
 
@@ -70,16 +70,16 @@ $("#sidebarToggleButton").on("click", function () {
 
     $("#sideBarContainer").toggleClass("active-sidebar");
     $('main').toggleClass("fill-screen");
-    $('.header').toggleClass("fill-screen");
+    $('.header').toggleClass("header-fill-screen");
     $('.menu-list label').toggleClass('hide-text');
     $('.menu-list a').toggleClass('ml-4');
 
     $("*.drop").removeClass("show");
     $("*.menu-caret-icon").removeClass("fa-caret-right");
 
-    if ($("#sideBarContainer").hasClass("active-sidebar")){
+    if ($("#sideBarContainer").hasClass("active-sidebar")) {
         localStorage.setItem("menuStatus", "show");
-    }else {
+    } else {
         localStorage.setItem("menuStatus", "hide");
     }
 });
@@ -95,13 +95,20 @@ $('.drop-menu').on("click", function () {
 
     // Menü kapalıyen açılma işlemi
     if (!$("#sideBarContainer").hasClass("active-sidebar")) {
-        
+
         $("#sideBarContainer").toggleClass("active-sidebar");
         $('main').toggleClass("fill-screen");
-        $('.header').toggleClass("fill-screen");
+        $('.header').toggleClass("header-fill-screen");
         $('.menu-list label').toggleClass('hide-text');
         $('.menu-list a').toggleClass('ml-4');
-        
+
     }
 
 });
+
+$(window).on("scroll", function () {
+    if ($(this).scrollTop() === 0)
+        $('#scrollBg').removeClass("header-bg");
+    else
+        $('#scrollBg').addClass("header-bg");
+})
