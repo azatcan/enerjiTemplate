@@ -111,9 +111,13 @@ $(window).on("scroll", function () {
         $('#scrollBg').removeClass("header-bg");
     else
         $('#scrollBg').addClass("header-bg");
-})
+});
 
 $('#showQuestionPanel').on("click", function() {
     $('.question-type-section').toggleClass("active-question-type-section");
     $('#showQuestionPanelIcon').toggleClass("fa-arrow-to-right");
-})
+});
+
+$('#newSectionButton').on('click', function() {
+    $('#questionSectionForm').append('<section class="section"></section>');
+});

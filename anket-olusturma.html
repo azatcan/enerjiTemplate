@@ -160,21 +160,31 @@
             </ul>
         </div>
     </div>
-    <main>
+    <main >
         <div class="container-fluid">
-            <div class="row ">
+            <div class="row">
                 <div class="col-12 mt-5">
-                    <section id="breadcrumb" class="d-flex">
+                    <div id="breadcrumb" class="d-flex align-items-center">
                         <h1 class="mr-auto">Anket Başlık Bilgisi</h1>
                         <div>
                             <label for="">Oluşturma Tarihi: <strong>26.07.2019</strong></label>
                         </div>
-                    </section>
+                    </div>
                 </div>
+                <div class="col-12 questions">
+                    <form id="questionSectionForm" action="#" method="post">
+                        <section class="section">
 
-                <section class="col-12 element-section">
-                    
-                </section>
+                        </section>
+                    </form>
+                </div>
+                <div class="col-12">
+                    <div class="element-section">
+                        <button id="newPageButton" class="btn btn-success waves-effect"><i class="fa fa-plus-circle"></i> Yeni Sayfa</button>
+                        <button id="newSectionButton" class="btn btn-success waves-effect mr-auto "><i class="fa fa-plus-circle"></i> Yeni Bölüm</button>
+                        <label for="">Hazırlanan soru adedi: 0</label>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -183,38 +193,33 @@
     <button id="showQuestionPanel" class="btn btn-circle waves-effect show-question-panel-button">
         <i id="showQuestionPanelIcon" class="fas fa-arrow-to-left"></i>
     </button>
-    <section class="question-type-section">
+    <section class="question-type-section shadow">
         <h3 class="">Soru Türü Seçiniz</h3>
         <div class="d-flex flex-column">
             <div class="question-type">
-                <i class="fal fa-bars"></i>
-                <span class="mr-auto" for="">Açıklama</span>
-                <button class="btn btn-white waves-effect btn-sm">Ekle</button>
+                <i class="fal fa-ball-pile"></i>
+                <span class="mr-auto" for="">Çoktan Seçmeli Soru</span>
+                <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
             </div>
             <div class="question-type">
-                <i class="fal fa-check"></i>
-                <span class="mr-auto" for="">Açıklama</span>
-                <button class="btn btn-white waves-effect btn-sm">Ekle</button>
+                <i class="fal fa-check-circle"></i>
+                <span class="mr-auto" for="">Çoklu Seçim</span>
+                <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
             </div>
             <div class="question-type">
-                <i class="fal fa-abacus"></i>
-                <span class="mr-auto" for="">Açıklama</span>
-                <button class="btn btn-white waves-effect btn-sm">Ekle</button>
+                <i class="fal fa-quote-right"></i>
+                <span class="mr-auto" for="">Açıklama Metni</span>
+                <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
             </div>
             <div class="question-type">
-                <i class="fal fa-sack"></i>
-                <span class="mr-auto" for="">Açıklama</span>
-                <button class="btn btn-white waves-effect btn-sm">Ekle</button>
+                <i class="fal fa-table"></i>
+                <span class="mr-auto" for="">Tablo Yapısı</span>
+                <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
             </div>
             <div class="question-type">
-                <i class="fal fa-angry"></i>
-                <span class="mr-auto" for="">Açıklama</span>
-                <button class="btn btn-white waves-effect btn-sm">Ekle</button>
-            </div>
-            <div class="question-type">
-                <i class="fal fa-rabbit"></i>
-                <span class="mr-auto" for="">Açıklama</span>
-                <button class="btn btn-white waves-effect btn-sm">Ekle</button>
+                <i class="fal fa-comments-alt"></i>
+                <span class="mr-auto" for="">Açık Uçlu Soru</span>
+                <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
             </div>
         </div>
     </section>
