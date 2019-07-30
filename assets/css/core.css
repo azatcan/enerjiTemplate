@@ -42,6 +42,10 @@ body {
     display: inline-flexbox;
 }
 
+.menu-list>li:last-child {
+    margin-bottom: 75px;
+}
+
 .menu-list>li:hover {
     border-left: #66bb6a 5px solid;
 }
@@ -190,7 +194,7 @@ body {
         position: fixed;
         top: 0;
         /* width: 80%; */
-        /* margin-left: 50px !important; */
+        margin-left: 65px !important;
         z-index: 1;
         right: 0;
         left: 0;
@@ -208,7 +212,7 @@ body {
     }
 
     .header-fill-screen {
-        margin-left: 170px !important;
+        margin-left: 100px !important;
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
         -ms-transition: all 0.3s ease;
@@ -260,7 +264,7 @@ body {
     }
 
     .header {
-        margin-left: 350px;
+        margin-left: 300px;
         height: 100px;
         position: fixed;
         display: flex;
