@@ -112,3 +112,8 @@ $(window).on("scroll", function () {
     else
         $('#scrollBg').addClass("header-bg");
 })
+
+$('#showQuestionPanel').on("click", function() {
+    $('.question-type-section').toggleClass("active-question-type-section");
+    $('#showQuestionPanelIcon').toggleClass("fa-arrow-to-right");
+})
