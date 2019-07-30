@@ -121,3 +121,8 @@ $('#showQuestionPanel').on("click", function() {
 $('#newSectionButton').on('click', function() {
     $('#questionSectionForm').append('<section class="section"></section>');
 });
+
+$(document).on('click', '.section', function() {
+    $('*.section').removeClass('border-primary');
+    $(this).addClass('border-primary');
+});
