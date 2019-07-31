@@ -16,9 +16,54 @@
     <link rel="stylesheet" href="./assets/components/mdb-v4.8.7/css/mdb.min.css">
 
     <link rel="stylesheet" href="./assets/css/core.css">
+
+    <!-- page specific css  -->
+    <link rel="stylesheet" href="assets\css\pages\anket-olusturma.css">
 </head>
 
 <body>
+<button id="showQuestionPanel" class="btn btn-circle waves-effect show-question-panel-button">
+    <i id="showQuestionPanelIcon" class="fas fa-arrow-to-left"></i>
+</button>
+<section class="question-type-section shadow">
+    <div class="question-type-bar-title d-flex">
+        <i class="fal fa-bars fa-2x mr-0"></i>
+        <h3 class="">Soru Türü Seçiniz</h3>
+    </div>
+    <div class="d-flex flex-column">
+        <div class="question-type">
+            <i class="fal fa-ball-pile"></i>
+            <div class="custom-tooltip">Çoktan Seçmeli Soru</div>
+            <span class="mr-auto" for="">Çoktan Seçmeli Soru</span>
+            <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
+        </div>
+        <div class="question-type">
+            <i class="fal fa-check-circle"></i>
+            <div class="custom-tooltip">Çoklu Seçim</div>
+            <span class="mr-auto" for="">Çoklu Seçim</span>
+            <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
+        </div>
+        <div class="question-type">
+            <i class="fal fa-quote-right"></i>
+            <div class="custom-tooltip">Açıklama Metni</div>
+            <span class="mr-auto" for="">Açıklama Metni</span>
+            <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
+        </div>
+        <div class="question-type">
+            <i class="fal fa-table"></i>
+            <div class="custom-tooltip">Tablo Yapısı</div>
+            <span class="mr-auto" for="">Tablo Yapısı</span>
+            <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
+        </div>
+        <div class="question-type">
+            <i class="fal fa-comments-alt"></i>
+            <div class="custom-tooltip">Açık Uçlu Soru</div>
+            <span class="mr-auto" for="">Açık Uçlu Soru</span>
+            <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
+        </div>
+    </div>
+</section>
+
     <div class="header">
         <div class="container-fluid">
             <div id="scrollBg" class="row mt-3">
@@ -172,18 +217,55 @@
                     </div>
                 </div>
                 <div class="col-12 questions">
-                    <form id="questionSectionForm" action="#" method="post">
+                    <form id="questionSectionForm" action="">
                         <section class="section">
                             <div class="row">
-                            <div class="col-12">
-                                <label class="label label-success fs-x1-5" for="">Soru</label>
-                                <button class="float-right btn btn-white"><i class="fal fa-edit fa-2x"></i>Düzenle</button>
-                                <button class="float-right btn btn-white"><i class="fal fa-bars fa-2x"></i>Seçenekler</button>
+                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                    <label class="label label-success fs-x1-5 mr-auto" for="">Soru</label>
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-outline-success waves-effect"><i class="fal fa-edit text-success"></i>Düzenle</button>
+                                        <button type="button" class="btn btn-white btn-outline-success waves-effect"><i class="fal fa-bars text-success"></i>Seçenekler</button>
+                                    </div>
+                                </div>
                             </div>
                             <hr>
-                            <div class="col-12">
-
-                            </div>
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="input-group mb-4">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">Soru Yazınız</span>
+                                        </div>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="input-group mb-4">
+                                         <div class="input-group-prepend">
+                                             <span class="input-group-text" id="basic-addon1">Yanıt Giriniz</span>
+                                         </div>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                     <div class="input-group mb-4">
+                                         <div class="input-group-prepend">
+                                             <span class="input-group-text" id="basic-addon1">Yanıt Giriniz</span>
+                                         </div>
+                                         <input type="text" class="form-control">
+                                     </div>
+                                      <div class="input-group mb-4">
+                                          <div class="input-group-prepend">
+                                              <span class="input-group-text" id="basic-addon1">Yanıt Giriniz</span>
+                                          </div>
+                                          <input type="text" class="form-control">
+                                      </div>
+                                </div>
+                                <div class="col-4">
+                                    <select class="form-control" name="" id="">
+                                        <option value="1">Seçiniz</option>
+                                        <option value="1">Ahmet</option>
+                                        <option value="1">Mehmet</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-white"><i class="fal fa-plus-circle"></i>Başka bir seçenek ekleniyiz</button>
+                                </div>
                             </div>
                         </section>
                     </form>
@@ -198,49 +280,12 @@
             </div>
         </div>
     </main>
-
-
-    <button id="showQuestionPanel" class="btn btn-circle waves-effect show-question-panel-button">
-        <i id="showQuestionPanelIcon" class="fas fa-arrow-to-left"></i>
-    </button>
-    <section class="question-type-section shadow">
-        <h3 class="">Soru Türü Seçiniz</h3>
-        <div class="d-flex flex-column">
-            <div class="question-type">
-                <i class="fal fa-ball-pile"></i>
-                <span class="mr-auto" for="">Çoktan Seçmeli Soru</span>
-                <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
-            </div>
-            <div class="question-type">
-                <i class="fal fa-check-circle"></i>
-                <span class="mr-auto" for="">Çoklu Seçim</span>
-                <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
-            </div>
-            <div class="question-type">
-                <i class="fal fa-quote-right"></i>
-                <span class="mr-auto" for="">Açıklama Metni</span>
-                <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
-            </div>
-            <div class="question-type">
-                <i class="fal fa-table"></i>
-                <span class="mr-auto" for="">Tablo Yapısı</span>
-                <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
-            </div>
-            <div class="question-type">
-                <i class="fal fa-comments-alt"></i>
-                <span class="mr-auto" for="">Açık Uçlu Soru</span>
-                <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
-            </div>
-        </div>
-    </section>
-
-
     <div class="loader block-screen">
         <div class="spinner-border text-success" role="status">
         </div>
         <label class="mt-3" for="">Yükleniyor...</label>
     </div>
-    <button id="sidebarToggleButton" class="menu-toggle-button btn rounded-circle waves-effect">
+    <button id="sidebarToggleButton" class="menu-toggle-button btn btn-circle waves-effect">
         <i class="fa fa-bars"></i>
     </button>
     <!-- JS Start -->

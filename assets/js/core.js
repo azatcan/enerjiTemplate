@@ -126,3 +126,9 @@ $(document).on('click', '.section', function() {
     $('*.section').removeClass('border-primary');
     $(this).addClass('border-primary');
 });
+
+$('.question-type').hover(function() {
+    $(this).children('.custom-tooltip').css('display', 'block');
+},function() {
+        $(this).children('.custom-tooltip').css('display', 'none');
+});
