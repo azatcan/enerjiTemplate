@@ -86,6 +86,7 @@ $("#sidebarToggleButton").on("click", function () {
 
 $("#notificationBoxButton").on("click", function () {
     $(".notification-box").toggleClass("show");
+    // $(".notification-box").slideToggle();
 });
 
 $('.drop-menu').on("click", function () {
@@ -111,4 +112,8 @@ $(window).on("scroll", function () {
         $('#scrollBg').removeClass("header-bg");
     else
         $('#scrollBg').addClass("header-bg");
+});
+
+$('#customDropDown').on("click", function () {
+    $('.custom-dropdown-menu').slideToggle(300);
 });

@@ -15,12 +15,18 @@ $(document).on('click', '.section', function () {
 });
 
 $('.question-type').hover(function () {
-    $(this).children('.custom-tooltip').css('display', 'block');
+
+    if (!$('.question-type-section').hasClass('active-question-type-section'))
+        $(this).children('.custom-tooltip').css('display', 'block');
+
 }, function () {
-    $(this).children('.custom-tooltip').css('display', 'none');
+
+    if (!$('.question-type-section').hasClass('active-question-type-section'))
+        $(this).children('.custom-tooltip').css('display', 'none');
+
 });
 
-$(document).on('click', '#appendAnswerInput', function() {
+$(document).on('click', '#appendAnswerInput', function () {
     $('#answerSection').append('<div class="input-group mb-4"><div class="input-group-prepend"><span class="input-group-text" id="basic-addon1">Yanıt Giriniz</span></div><input type="text" class="form-control"><div class="input-group-append"><button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2"><i class="fa fa-minus"></i></button></div></div>');
 });
 
@@ -28,7 +34,7 @@ $(document).on("click", '*#removeAnswerInput', function () {
     $(this).parent().parent().remove();
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
     var d = new Date();
 
     var month = d.getMonth() + 1;
@@ -36,5 +42,5 @@ $(document).ready(function() {
 
     var date = day + '.' + month + '.' + d.getFullYear();
     $('#showDate').text(date);
-    
+
 });
