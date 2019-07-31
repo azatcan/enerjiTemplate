@@ -1,9 +1,17 @@
 .fill-screen {
-    margin-right: 125px;
+    margin-right: 125px !important;
 }
 
 .header-fill-screen {
     margin-right: 100px;
+}
+
+main {
+    margin-right: 125px;
+}
+
+.header {
+    margin-right: 125px;
 }
 
 .question-type-section {
@@ -15,7 +23,7 @@
     height: 100%;
     background-color: #ffffff;
     border: #d4d4d4 solid 1px;
-    z-index: 12;
+    z-index: 100;
 }
 
 .question-type-section span,
@@ -41,7 +49,7 @@
 }
 
 .question-type {
-    margin: .5rem 1.5rem;
+    margin: .5rem;
     /* border: #d4d4d4 solid 1px; */
     border-radius: .75rem;
     padding: 0.1rem 1rem;
@@ -51,14 +59,16 @@
 
 .question-type>i {
     font-size: 1.5rem;
-    margin-right: 1rem
+    margin-right: 1rem;
+    border: #d4d4d4 solid 1px;
+    border-radius: .75rem;
+    padding: 1rem;
 }
 
 .question-type:hover,
 question-type:active {
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     background-color: #5cb85c;
-    padding: .3rem;
     color: #ffffff;
 }
 
@@ -94,6 +104,7 @@ question-type:active {
 
 .element-section {
     margin-top: 1rem;
+    margin-bottom: 3rem;
     padding: 1rem 2rem;
     background: #ffffff;
     border-radius: 1rem;
