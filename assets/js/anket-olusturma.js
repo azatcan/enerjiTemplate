@@ -4,9 +4,11 @@ $('*#showQuestionPanel').on("click", function () {
     $('.question-type > i').toggleClass("border-0");
     $('.question-type').toggleClass("border");
 });
-
+var sectionCounter = 1;
 $('#newSectionButton').on('click', function () {
-    $('#questionSectionForm').append('<section class="section"></section>');
+    sectionCounter++;
+    $('#questionSectionForm').append('<section id="section' + sectionCounter + '" class="section"></section>');
+    $('.section-control-area').append('<hr class="section-hr"><div class="section-control"><a href="#section' + sectionCounter + '" class="btn btn-light btn-sm">' + sectionCounter + '</a></div>');
 });
 
 $(document).on('click', '.section', function () {
@@ -43,4 +45,23 @@ $(document).ready(function () {
     var date = day + '.' + month + '.' + d.getFullYear();
     $('#showDate').text(date);
 
+});
+
+var pageCounter = 1;
+$('#newPageButton').on('click', function() {
+    if(pageCounter < 5){
+        $('#pageControlSection').append('<div id="buttonGroup"><button class="btn btn-success btn-sm mr-4 text-nowrap waves-effect" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sayfa ' + (pageCounter + 1) + '<i class="fa fa-ellipsis-h"></i></button><div class="dropdown-menu"><a id="removePageButton" class="dropdown-item" href="#">Sil</a></div></div>');
+        pageCounter ++;
+    }
+});
+
+$(document).on("click", "#removePageButton", function() {
+    $(this).parent().parent().remove();
+    pageCounter--;
+    let groups = $('*#buttonGroup');
+
+    $('*#buttonGroup').each(function (index) {
+        $(this).children("button").text("Sayfa " + (index + 1));
+        $(this).children("button").append('<i class="fa fa-ellipsis-h"></i>');
+    });
 });

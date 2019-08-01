@@ -49,6 +49,7 @@ $(document).ready(function () {
             $('.header').addClass("header-fill-screen");
             $('.menu-list label').addClass('hide-text');
             $('.menu-list a').addClass('ml-4');
+            $("#sidebarToggleButton").children("i").addClass("fa-arrow-to-right");
 
             $("*.drop").removeClass("show");
             $("*.menu-caret-icon").removeClass("fa-caret-right");
@@ -59,6 +60,8 @@ $(document).ready(function () {
             $('.header').removeClass("header-fill-screen");
             $('.menu-list label').removeClass('hide-text');
             $('.menu-list a').removeClass('ml-4');
+            $("#sidebarToggleButton").children("i").removeClass("fa-arrow-to-right");
+
 
             $("*.drop").removeClass("show");
             $("*.menu-caret-icon").removeClass("fa-caret-right");
@@ -69,6 +72,7 @@ $(document).ready(function () {
 $("#sidebarToggleButton").on("click", function () {
 
     $("#sideBarContainer").toggleClass("active-sidebar");
+    $("#sidebarToggleButton").children("i").toggleClass("fa-arrow-to-right");
     $('main').toggleClass("fill-screen");
     $('.header').toggleClass("header-fill-screen");
     $('.menu-list label').toggleClass('hide-text');
@@ -114,6 +118,12 @@ $(window).on("scroll", function () {
         $('#scrollBg').addClass("header-bg");
 });
 
-$('#customDropDown').on("click", function () {
-    $('.custom-dropdown-menu').slideToggle(300);
+$('*[data-toggle="dropdown"]').click(function () {
+    // $(this).next('.dropdown-menu').fadeToggle(300);
+    $(this).next('.dropdown-menu').slideToggle();
+});
+
+$('*[data-toggle="dropdown"]').focusout(function () {
+    // $(this).next('.dropdown-menu').slideUp();
+    $(this).next('.dropdown-menu').fadeOut();
 });

@@ -23,7 +23,7 @@ main {
     height: 100%;
     background-color: #ffffff;
     border: #d4d4d4 solid 1px;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .question-type-section span,
@@ -110,4 +110,31 @@ question-type:active {
     border-radius: 1rem;
     display: flex;
     align-items: center;
+}
+
+.section-control-area {
+    position: sticky;
+    top: 125px;
+}
+
+.section-control {
+    margin-top: 1rem;
+    border-radius: .5rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-control>a {
+    padding: .5rem 1rem !important;
+}
+
+.section-hr {
+    transform:rotate(90deg);
+    margin: 1rem;
+}
+
+.btn-active-section{
+    background-color: #5cb85c;
 }

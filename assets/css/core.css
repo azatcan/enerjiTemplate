@@ -154,7 +154,7 @@ body {
     }
 
     .side-bar {
-        z-index: 10;
+        z-index: 100;
         position: fixed;
         height: 100%;
         background: #ffffff;
@@ -174,7 +174,7 @@ body {
         top: 1rem;
         padding-left: 1.1rem;
         padding-right: 1.1rem;
-        z-index: 11;
+        z-index: 101;
         background-color: #ffffff;
     }
 
@@ -426,6 +426,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+    border-radius: .5rem;
 }
 
 .btn > i {
@@ -458,4 +461,21 @@ body {
 }
 .custom-dropdown-menu li{
     padding: 1rem;
+}
+
+.home-button{
+    width: 250px;
+}
+
+.content-section{
+    width: 100%;
+    border: #d3d3d3 solid 1px;
+    border-radius: 1rem;
+    margin-top: 16px;
+    background: #fff;
+    padding: 1rem;
+}
+
+.content-section-sm {
+    padding: .5rem 1rem;
 }
