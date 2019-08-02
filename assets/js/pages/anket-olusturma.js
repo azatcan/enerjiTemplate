@@ -77,8 +77,8 @@ $('#multipleChoiceQuestionAddButton').on("click", function () {
         '</div>\n' +
         '</div>\n' +
         '</div>\n' +
-        '<div class="row">\n' +
         '<hr>\n' +
+        '<div class="row">\n' +
         '<div id="answerSection" class="col-8">\n' +
         '<div class="input-group mb-4">\n' +
         '<div class="input-group-prepend">\n' +
