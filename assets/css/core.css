@@ -264,6 +264,7 @@ body {
     .header {
         transition: all 0.3s ease;
         margin-left: 325px;
+        margin-right: 25px;
         height: 100px;
         position: fixed;
         display: flex;
