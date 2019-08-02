@@ -545,3 +545,7 @@ body {
 .display-none{
     display: none;
 }
+
+#modalBodyContentMargin > div{
+    margin-bottom: 1rem;
+}
