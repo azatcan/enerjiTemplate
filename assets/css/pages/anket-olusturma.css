@@ -92,14 +92,22 @@ question-type:active {
     text-align: center;
 }
 
-.section {
-    min-height: 150px;
+.question-area {
     width: 100%;
     border: #d3d3d3 solid 1px;
     border-radius: 1rem;
     margin-top: 16px;
     background: #fff;
     padding: 1rem 3rem 3rem 3rem;
+}
+
+.section{
+    min-height: 150px;
+    width: 100%;
+    border: #d3d3d3 solid 1px;
+    border-radius: 1rem;
+    /*padding: 1rem 3rem 3rem 3rem;*/
+    margin-top: 16px;
 }
 
 .element-section {

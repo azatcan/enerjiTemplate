@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Anasayfa</title>
 
-    <!-- <link rel="stylesheet" href="./assets/components/bootstrap-4.3.1/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="assets\components\mdb-v4.8.7\css\bootstrap.min.css">
+     <link rel="stylesheet" href="./assets/components/bootstrap-4.3.1/css/bootstrap.min.css">
 
     <!-- Font awesome -->
     <link rel="stylesheet" href="./assets/components/fontawesome-pro-5.8.2/css/all.min.css">
@@ -38,7 +37,7 @@
                 <i class="fal fa-ball-pile border"></i>
                 <div class="custom-tooltip">Çoktan Seçmeli Soru</div>
                 <span class="mr-auto" for="">Çoktan Seçmeli Soru</span>
-                <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
+                <button id="multipleChoiceQuestionAddButton" class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
             </div>
             <div class="question-type">
                 <i class="fal fa-check-circle"></i>
@@ -211,12 +210,14 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
+                    <hr>
                     <div id="breadcrumb" class="mt-md-5 mt-lg-0 d-flex align-items-center">
                         <h1 class="mr-auto">Anket Başlık Bilgisi</h1>
                         <div>
                             <label for="">Oluşturma Tarihi: <strong id="showDate"></strong></label>
                         </div>
                     </div>
+                    <hr>
                 </div>
             </div>
             <div class="row">
@@ -245,11 +246,13 @@
                 <div class="col-11 questions">
                     <form id="questionSectionForm" action="">
                         <section id="section1" class="section">
+                            <section class="question-area">
+
                             <div class="row">
                                 <div class="col-12 d-flex justify-content-center align-items-center">
                                     <label class="label label-success fs-x1-5 mr-auto" for="">Soru</label>
                                     <div class="d-flex">
-                                        <button type="button" class="btn btn-outline-success waves-effect"><i class="fal fa-edit text-success"></i>Düzenle</button>
+                                        <button type="button" class="btn btn-white btn-outline-success waves-effect"><i class="fal fa-edit text-success"></i>Düzenle</button>
                                         <button type="button" class="btn btn-white btn-outline-success waves-effect"><i class="fal fa-bars text-success"></i>Seçenekler</button>
                                     </div>
                                 </div>
@@ -259,26 +262,17 @@
                                 <div id="answerSection" class="col-8">
                                     <div class="input-group mb-4">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">Soru Yazınız</span>
+                                            <span class="input-group-text">Soru Yazınız</span>
                                         </div>
                                         <input type="text" class="form-control">
                                     </div>
                                     <div class="input-group mb-4">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">Yanıt Giriniz</span>
+                                            <span class="input-group-text">Yanıt Giriniz</span>
                                         </div>
                                         <input type="text" class="form-control">
                                         <div class="input-group-append">
-                                            <button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2"><i class="fa fa-minus"></i></button>
-                                        </div>
-                                    </div>
-                                    <div class="input-group mb-4">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">Yanıt Giriniz</span>
-                                        </div>
-                                        <input type="text" class="form-control">
-                                        <div class="input-group-append">
-                                            <button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2"><i class="fa fa-minus"></i></button>
+                                            <button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button"><i class="fa fa-minus"></i></button>
                                         </div>
                                     </div>
                                     <div class="input-group mb-4">
@@ -287,7 +281,16 @@
                                         </div>
                                         <input type="text" class="form-control">
                                         <div class="input-group-append">
-                                            <button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2"><i class="fa fa-minus"></i></button>
+                                            <button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button"><i class="fa fa-minus"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="input-group mb-4">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">Yanıt Giriniz</span>
+                                        </div>
+                                        <input type="text" class="form-control">
+                                        <div class="input-group-append">
+                                            <button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button"><i class="fa fa-minus"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -302,6 +305,8 @@
                                     <a id="appendAnswerInput" class=""><i class="fal fa-plus-circle mr-2"></i>Başka bir seçenek ekleniyiz</a>
                                 </div>
                             </div>
+                            </section>
+
                         </section>
                     </form>
                 </div>
@@ -324,16 +329,15 @@
     <script src="./assets/components/jquery/jquery-3.4.1.min.js"></script>
     <script src="./assets/components/popover/popover.js"></script>
 
-    <!-- <script src="./assets/components/bootstrap-4.3.1/js/bootstrap.min.js"></script> -->
-    <script src="assets\components\mdb-v4.8.7\js\bootstrap.min.js"></script>
+     <script src="./assets/components/bootstrap-4.3.1/js/bootstrap.min.js"></script>
 
     <!-- Material js -->
     <script src="./assets/components/mdb-v4.8.7/js/mdb.min.js"></script>
 
     <script src="./assets/js/core.js"></script>
 
-    <!-- specific page js -->
-    <script src="assets\js\anket-olusturma.js"></script>
+    <!-- page specific js -->
+    <script src="assets/js/pages/anket-olusturma.js"></script>
 
     <!-- JS END -->
 </body>
