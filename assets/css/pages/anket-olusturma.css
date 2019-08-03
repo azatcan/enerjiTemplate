@@ -93,10 +93,9 @@ question-type:active {
 }
 
 .question-area {
-    width: 100%;
     border: #d3d3d3 solid 1px;
     border-radius: 1rem;
-    margin-top: 16px;
+    margin: 1rem;
     background: #fff;
     padding: 1rem 3rem 3rem 3rem;
 }
@@ -106,9 +105,23 @@ question-type:active {
     width: 100%;
     background-color: #eaeaea;
     border: #d3d3d3 solid 1px;
-    border-radius: 1rem;
+    border-radius: .6rem;
     /*padding: 1rem 3rem 3rem 3rem;*/
     margin-top: 16px;
+}
+
+.section-header{
+    width: 100%;
+    border-radius: .6rem;
+    background-color: #5cb85c;
+    color: #fff;
+    padding: .3rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.section-header > h3{
+    margin-left: 1rem;
 }
 
 .element-section {

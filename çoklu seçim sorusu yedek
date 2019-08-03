@@ -1,0 +1,60 @@
+
+<section class="question-area">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+            <label class="label label-success fs-x1-5 mr-auto" for="">Soru</label>
+            <div class="d-flex">
+                <button type="button" class="btn btn-white btn-outline-success waves-effect"><i class="fal fa-edit text-success"></i>Düzenle</button>
+                <button type="button" class="btn btn-white btn-outline-success waves-effect"><i class="fal fa-bars text-success"></i>Seçenekler</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div id="answerSection" class="col-8">
+            <div class="input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Soru Yazınız</span>
+                </div>
+                <input type="text" class="form-control">
+            </div>
+            <div class="input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Yanıt Giriniz</span>
+                </div>
+                <input type="text" class="form-control">
+                <div class="input-group-append">
+                    <button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button"><i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Yanıt Giriniz</span>
+                </div>
+                <input type="text" class="form-control">
+                <div class="input-group-append">
+                    <button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button"><i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Yanıt Giriniz</span>
+                </div>
+                <input type="text" class="form-control">
+                <div class="input-group-append">
+                    <button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button"><i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <select class="form-control" name="" id="">
+                <option value="1">Soru Tipi</option>
+                <option value="1">Ahmet</option>
+                <option value="1">Mehmet</option>
+            </select>
+        </div>
+        <div class="col-12">
+            <a id="appendAnswerInput" class=""><i class="fal fa-plus-circle mr-2"></i>Başka bir seçenek ekleniyiz</a>
+        </div>
+    </div>
+</section>
