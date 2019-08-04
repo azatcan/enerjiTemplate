@@ -94,20 +94,11 @@ $('#newPageButton').on('click', function () {
     if (pageCounter < 5) {
 
         pageCounter++;
-        // $('#pageControlSection')
-        //     .append('<div id="buttonGroup">' +
-        //     '<button class="btn btn-light btn-sm mr-4 text-nowrap waves-effect" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sayfa ' + pageCounter + '<i class="fa' +
-        //         ' fa-ellipsis-h"></i></button>' +
-        //     '<div class="dropdown-menu">' +
-        //     '<a id="showTab" data-showcustomtab="#customTab' + pageCounter + '" class="dropdown-item" href="#">Göster</a>' +
-        //     '<a id="removePageButton" class="dropdown-item" href="#">Sil</a>' +
-        //     '</div>' +
-        //     '</div>');
 
         $('#pageControlSection')
             .append('<div class="d-flex align-items-center" id="buttonGroup">\n' +
                 '<div class="btn-group btn-group-sm mr-4" role="group">\n' +
-                '<button type="button" class="btn btn-light btn-sm waves-effect">Sayfa ' + pageCounter + '</button>\n' +
+                '<button type="button" id="pageButton" data-pagecontrolnumber="' + pageCounter + '" class="btn btn-light btn-sm waves-effect">Sayfa ' + pageCounter + '</button>\n' +
                 '<div class="btn-group" role="group">\n' +
                 '<button id="btnGroupDrop1" type="button" class="btn btn-light btn-circle btn-sm waves-effect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\n' +
                 '<i class="fa fa-ellipsis-h"></i>\n' +
@@ -121,11 +112,85 @@ $('#newPageButton').on('click', function () {
                 '</div>\n' +
                 '</div>');
 
+        $('.page').addClass('d-none');
+
+        $('#pageArea').append('<div data-pagenumber="' + pageCounter + '" class="row page">\n' +
+            '<div class="col-1 d-flex flex-column align-items-center">\n' +
+            '<div class="section-control-area">\n' +
+            '<div class="section-control">\n' +
+            '<a href="#section1" class="btn btn-light btn-sm btn-active-section">1</a>\n' +
+            '</div>\n' +
+            '</div>\n' +
+            '</div>\n' +
+            '<div class="col-11 questions">\n' +
+            '<div id="questionSectionForm">\n' +
+            '<section id="section1" class="section">\n' +
+            '<div class="section-header">\n' +
+            '<h3 class="mr-auto">Bölüm 1</h3>\n' +
+            '<div class="dropdown">\n' +
+            '<button class="btn waves-effect" type="button" id="dropdownSectionHeader" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\n' +
+            '<i class="fa fa-ellipsis-h"></i>\n' +
+            '</button>\n' +
+            '<div class="dropdown-menu dropdown-primary">\n' +
+            '<a id="removeSectionButton" class="dropdown-item" href="javascript:void(0)">Sil</a>\n' +
+            '</div>\n' +
+            '</div>\n' +
+            '</div>\n' +
+            '</section>\n' +
+            '</div>\n' +
+            '</div>\n' +
+            '</div>');
+
+        $('*#pageButton').not(this).addClass('btn-light');
+        $('*#btnGroupDrop1').not(this).addClass('btn-light');
+
+        $('*#pageButton').last().removeClass('btn-light');
+        $('*#btnGroupDrop1').last().removeClass('btn-light');
+
+        $('*#pageButton').last().addClass('btn-success');
+        $('*#btnGroupDrop1').last().addClass('btn-success');
+
     }
 
 });
 
+$(document).on("click", "*#pageButton", function () {
+
+    $('*#pageButton').not(this).addClass('btn-light');
+    $('*#btnGroupDrop1').not(this).addClass('btn-light');
+
+    // Dropdown rengini ayaladım
+    $(this)
+        .next()
+        .children('button')
+        .removeClass('btn-light');
+    $(this)
+        .next()
+        .children('button')
+        .addClass('btn-success');
+
+    // page butonlerın rengini ayarladım
+    $(this).removeClass('btn-light');
+    $(this).addClass('btn-success');
+
+
+    let pageNumber = $(this).data('pagecontrolnumber');
+
+    $('.page').addClass('d-none');
+
+    $( "[data-pagenumber='" + pageNumber + "']" ).removeClass('d-none');
+
+});
+
 $(document).on("click", "#removePageButton", function () {
+
+    let pageNumber = $(this)
+        .parent()
+        .parent()
+        .prev()
+        .data('pagecontrolnumber');
+
+    $( '[data-pagenumber="' + pageNumber + '"]' ).remove();
 
     $(this)
         .parent()

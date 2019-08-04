@@ -228,14 +228,8 @@
                 <div class="content-section content-section-sm d-flex">
                     <div id="pageControlSection" class="mr-auto d-flex">
                         <div class="d-flex align-items-center" id="buttonGroup">
-                            <!--<button class="btn btn-success btn-sm mr-4 text-nowrap" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sayfa 1 <i class="fa fa-ellipsis-h"></i></button>
-                            <div class="dropdown-menu">
-                                <a id="showTab" data-showcustomtab="#customTab1" class="dropdown-item" href="#">Göster</a>
-                                <a id="removePageButton" class="dropdown-item" href="#">Sil</a>
-                            </div>-->
-
                             <div class="btn-group btn-group-sm mr-4" role="group">
-                                <button type="button" class="btn btn-success btn-sm">Sayfa 1</button>
+                                <button id="pageButton" data-pagecontrolnumber="1" type="button" class="btn btn-success btn-sm">Sayfa 1</button>
                                 <div class="btn-group" role="group">
                                     <button id="btnGroupDrop1" type="button" class="btn btn-success btn-circle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="fa fa-ellipsis-h"></i>
@@ -247,39 +241,39 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <button id="newPageButton" class="btn btn-light btn-sm waves-effect"><i class="fa fa-plus-circle"></i> Yeni Sayfa</button>
                 </div>
             </div>
         </div>
-        <div class="row" id="pageArea">
-            <div class="col-1 d-flex flex-column align-items-center">
-                <div class="section-control-area">
-                    <div class="section-control">
-                        <a href="#section1" class="btn btn-light btn-sm btn-active-section">1</a>
+        <div id="pageArea" >
+            <div data-pagenumber="1" class="row page">
+                <div class="col-1 d-flex flex-column align-items-center">
+                    <div class="section-control-area">
+                        <div class="section-control">
+                            <a href="#section1" class="btn btn-light btn-sm btn-active-section">1</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-11 questions">
-                <form id="questionSectionForm" action="">
-                    <section id="section1" class="section">
-                        <div class="section-header">
-                            <h3 class="mr-auto">Bölüm 1</h3>
-                            <div class="dropdown">
-                                <button class="btn waves-effect" type="button" id="dropdownSectionHeader" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-ellipsis-h"></i>
-                                </button>
-                                <div class="dropdown-menu dropdown-primary">
-                                    <a id="removeSectionButton" class="dropdown-item" href="javascript:void(0)">Sil</a>
+                <div class="col-11 questions">
+                    <div id="questionSectionForm">
+                        <section id="section1" class="section">
+                            <div class="section-header">
+                                <h3 class="mr-auto">Bölüm 1</h3>
+                                <div class="dropdown">
+                                    <button class="btn waves-effect" type="button" id="dropdownSectionHeader" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-ellipsis-h"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-primary">
+                                        <a id="removeSectionButton" class="dropdown-item" href="javascript:void(0)">Sil</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--Sorular Bu alana gelecek-->
-                    </section>
-
-                </form>
+                            <!--Sorular Bu alana gelecek-->
+                        </section>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">

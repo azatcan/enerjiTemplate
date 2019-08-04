@@ -528,6 +528,13 @@ b,strong{
     border-right: unset;
 }
 
+.special-bar{
+    width: 100%;
+    margin-top: 16px;
+    padding: 1rem;
+    border-top: #d3d3d3 solid 1px;
+}
+
 .table-section{
     width: 100%;
     margin-top: 16px;
@@ -570,4 +577,22 @@ b,strong{
 
 #modalBodyContentMargin > div{
     margin-bottom: 1rem;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: #66bb6a;
+    color: #fff;
+}
+
+.nav-pills .nav-link{
+    background-color: #fff;
+    margin: .30rem 0;
+    color: #343434;
+}
+
+.fa ,
+.fal,
+.far,
+.fas{
+    margin:0 0.5rem;
 }
