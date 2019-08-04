@@ -41,7 +41,7 @@
             <i class="fal fa-check-circle"></i>
             <div class="custom-tooltip">Çoklu Seçim</div>
             <span class="mr-auto" for="">Çoklu Seçim</span>
-            <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
+            <button id="multiselectedQuestion" class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
         </div>
         <div class="question-type">
             <i class="fal fa-quote-right"></i>
@@ -247,7 +247,7 @@
                 </div>
             </div>
         </div>
-        <div id="pageArea" >
+        <div id="pageArea">
             <div data-pagenumber="1" class="row page">
                 <div class="col-1 d-flex flex-column align-items-center">
                     <div class="section-control-area">
@@ -258,6 +258,18 @@
                 </div>
                 <div class="col-11 questions">
                     <div id="questionSectionForm">
+                        <section class="section-desc">
+                            <div class="section-header bg-secondary">
+                                <h3 class="mr-auto">Açıklama</h3>
+                                <button id="descEditButton" class="btn btn-light"><i class="fal fa-edit"></i>Düzenle</button>
+                                <button id="descSaveButton" class="btn btn-light"><i class="fal fa-save"></i>Kaydet</button>
+                            </div>
+                            <!--Sorular Bu alana gelecek-->
+                            <div class="desc-area d-flex">
+                               <textarea name="" id="descTextArea" class="col-12 form-control">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi aspernatur aut beatae delectus eos, est illo, ipsum nihil numquam odit qui quia quidem, quo quos rem reprehenderit sunt voluptatibus.</textarea>
+                                <div class="d-none" id="descTextAreacontent"></div>
+                            </div>
+                        </section>
                         <section id="section1" class="section">
                             <div class="section-header">
                                 <h3 class="mr-auto">Bölüm 1</h3>

@@ -100,7 +100,8 @@ question-type:active {
     padding: 1rem 3rem 3rem 3rem;
 }
 
-.section{
+.section,
+.section-desc{
     min-height: 150px;
     width: 100%;
     background-color: #eaeaea;

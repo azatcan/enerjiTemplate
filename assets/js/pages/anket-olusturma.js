@@ -212,6 +212,7 @@ $('#multipleChoiceQuestionAddButton').on("click", function () {
 
     $('.section.border-primary')
         .append('<section class="question-area">\n' +
+            '<input type="text" id="questionType" hidden value="multipleChoiceQuestion">' +
             '<div class="row">\n' +
             '<div class="col-12 d-flex justify-content-center align-items-center">\n' +
             '<label class="label label-success fs-x1-5 mr-auto" for="">Soru</label>\n' +
@@ -307,4 +308,84 @@ $(document).on('click', '#removeSectionButton', function(){
         .parent()
         .parent()
         .remove();
+});
+
+$(document).on('change', '#descTextArea', function () {
+    $('#descTextAreacontent').text($(this).val());
+});
+
+$('#descSaveButton').click(function () {
+    $('#descTextAreacontent').text($('#descTextArea').val());
+    $('#descTextArea').addClass('d-none');
+    $('#descTextAreacontent').removeClass('d-none');
+});
+
+$('#descEditButton').click(function () {
+    $('#descTextArea').removeClass('d-none');
+    $('#descTextAreacontent').addClass('d-none');
+});
+
+$(document).on('click', '#multiselectedQuestion', function () {
+
+    $('.section.border-primary')
+        .append('<section class="question-area">\n' +
+            '<input type="text" id="questionType" hidden value="multiSelect">' +
+            '<div class="row">\n' +
+            '<div class="col-12 d-flex justify-content-center align-items-center">\n' +
+            '<label class="label label-success fs-x1-5 mr-auto" for="">Soru</label>\n' +
+            '<div class="d-flex">\n' +
+            '<button type="button" class="btn btn-white btn-outline-success waves-effect"><i class="fal fa-edit text-success"></i>Düzenle</button>\n' +
+            '<button type="button" class="btn btn-white btn-outline-success waves-effect"><i class="fal fa-bars text-success"></i>Seçenekler</button>\n' +
+            '</div>\n' +
+            '</div>\n' +
+            '</div>\n' +
+            '<hr>\n' +
+            '<div class="row">\n' +
+            '<div id="answerSection" class="col-8">\n' +
+            '<div class="input-group mb-4">\n' +
+            '<div class="input-group-prepend">\n' +
+            '<span class="input-group-text">Soru Yazınız</span>\n' +
+            '</div>\n' +
+            '<input type="text" class="form-control">\n' +
+            '</div>\n' +
+            '<div class="input-group mb-4">\n' +
+            '<div class="input-group-prepend">\n' +
+            '<span class="input-group-text">Yanıt Giriniz</span>\n' +
+            '</div>\n' +
+            '<input type="text" class="form-control">\n' +
+            '<div class="input-group-append">\n' +
+            '<button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button"><i class="fa fa-minus"></i></button>\n' +
+            '</div>\n' +
+            '</div>\n' +
+            '<div class="input-group mb-4">\n' +
+            '<div class="input-group-prepend">\n' +
+            '<span class="input-group-text" id="basic-addon1">Yanıt Giriniz</span>\n' +
+            '</div>\n' +
+            '<input type="text" class="form-control">\n' +
+            '<div class="input-group-append">\n' +
+            '<button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button"><i class="fa fa-minus"></i></button>\n' +
+            '</div>\n' +
+            '</div>\n' +
+            '<div class="input-group mb-4">\n' +
+            '<div class="input-group-prepend">\n' +
+            '<span class="input-group-text" id="basic-addon1">Yanıt Giriniz</span>\n' +
+            '</div>\n' +
+            '<input type="text" class="form-control">\n' +
+            '<div class="input-group-append">\n' +
+            '<button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button"><i class="fa fa-minus"></i></button>\n' +
+            '</div>\n' +
+            '</div>\n' +
+            '</div>\n' +
+            '<div class="col-4">\n' +
+            '<select class="form-control" name="" id="">\n' +
+            '<option value="1">Soru Tipi</option>\n' +
+            '<option value="1">Ahmet</option>\n' +
+            '<option value="1">Mehmet</option>\n' +
+            '</select>\n' +
+            '</div>\n' +
+            '<div class="col-12">\n' +
+            '<a id="appendAnswerInput" class=""><i class="fal fa-plus-circle mr-2"></i>Başka bir seçenek ekleniyiz</a>\n' +
+            '</div>\n' +
+            '</div>\n' +
+            '</section>');
 });

@@ -596,3 +596,11 @@ b,strong{
 .fas{
     margin:0 0.5rem;
 }
+
+.desc-area {
+    border: #d3d3d3 solid 1px;
+    border-radius: 1rem;
+    margin: 1rem;
+    background: #fff;
+    padding: 1rem ;
+}
