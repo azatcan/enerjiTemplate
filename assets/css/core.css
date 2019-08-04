@@ -40,16 +40,19 @@ b,strong{
 .logo-container {
     width: 100%;
     max-height: 100px;
+    display: flex;
+    align-items: center;
 }
 
 .logo-container>img {
-    padding: 25px;
+    height: 65px;
+    object-fit: contain;
+    margin: 1rem;
 }
 
 .menu-list {
     list-style-type: none;
     padding-left: 0;
-    padding-top: 10%;
 }
 
 .menu-list>li {
@@ -529,7 +532,7 @@ b,strong{
     width: 100%;
     margin-top: 16px;
     border: #d3d3d3 solid 1px;
-    border-radius: 1rem;
+    border-radius: .8rem;
     border-left: unset;
     border-right: unset;
     background-color: #fff;
@@ -541,7 +544,7 @@ b,strong{
     color: #f4f6f9;
     width: 100%;
     padding: .5rem .3rem;
-    border-radius: 1rem 1rem 0 0;
+    border-radius: .8rem .8rem 0 0;
     display: flex;
 }
 

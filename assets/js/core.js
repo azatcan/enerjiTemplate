@@ -115,6 +115,7 @@ $("#sidebarToggleButton").on("click", function () {
     $('main').toggleClass("fill-screen");
     $('.header').toggleClass("header-fill-screen");
     $('.menu-list label').toggleClass('hide-text');
+    $(' #logoLabel').toggleClass('hide-text');
     $('.menu-list a').toggleClass('ml-4');
     $('.menu-caret-icon').toggleClass('fa-caret-down');
 
@@ -146,6 +147,7 @@ $('.drop-menu').on("click", function () {
         $('.header').toggleClass("header-fill-screen");
         $('.menu-list label').toggleClass('hide-text');
         $('.menu-list a').toggleClass('ml-4');
+        $(' #logoLabel').toggleClass('hide-text');
 
     }
 

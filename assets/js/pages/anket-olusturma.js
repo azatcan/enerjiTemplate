@@ -94,14 +94,32 @@ $('#newPageButton').on('click', function () {
     if (pageCounter < 5) {
 
         pageCounter++;
+        // $('#pageControlSection')
+        //     .append('<div id="buttonGroup">' +
+        //     '<button class="btn btn-light btn-sm mr-4 text-nowrap waves-effect" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sayfa ' + pageCounter + '<i class="fa' +
+        //         ' fa-ellipsis-h"></i></button>' +
+        //     '<div class="dropdown-menu">' +
+        //     '<a id="showTab" data-showcustomtab="#customTab' + pageCounter + '" class="dropdown-item" href="#">Göster</a>' +
+        //     '<a id="removePageButton" class="dropdown-item" href="#">Sil</a>' +
+        //     '</div>' +
+        //     '</div>');
+
         $('#pageControlSection')
-            .append('<div id="buttonGroup">' +
-            '<button class="btn btn-success btn-sm mr-4 text-nowrap waves-effect" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sayfa ' + pageCounter + '<i class="fa fa-ellipsis-h"></i></button>' +
-            '<div class="dropdown-menu">' +
-            '<a id="showTab" data-showcustomtab="#customTab' + pageCounter + '" class="dropdown-item" href="#">Göster</a>' +
-            '<a id="removePageButton" class="dropdown-item" href="#">Sil</a>' +
-            '</div>' +
-            '</div>');
+            .append('<div class="d-flex align-items-center" id="buttonGroup">\n' +
+                '<div class="btn-group btn-group-sm mr-4" role="group">\n' +
+                '<button type="button" class="btn btn-light btn-sm waves-effect">Sayfa ' + pageCounter + '</button>\n' +
+                '<div class="btn-group" role="group">\n' +
+                '<button id="btnGroupDrop1" type="button" class="btn btn-light btn-circle btn-sm waves-effect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\n' +
+                '<i class="fa fa-ellipsis-h"></i>\n' +
+                '</button>\n' +
+                '<div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">\n' +
+                '<a id="removePageButton" class="dropdown-item" href="javascript:void(0)"><i class="fal fa-trash"></i> Sil</a>\n' +
+                '<a class="dropdown-item" href="javascript:void(0)"><i class="fal fa-copy"></i> Kopyala</a>\n' +
+                '<a class="dropdown-item" href="javascript:void(0)"><i class="fal fa-layer-plus"></i> Taşı</a>\n' +
+                '</div>\n' +
+                '</div>\n' +
+                '</div>\n' +
+                '</div>');
 
     }
 
@@ -109,11 +127,14 @@ $('#newPageButton').on('click', function () {
 
 $(document).on("click", "#removePageButton", function () {
 
-    $(this).parent().parent().remove();
+    $(this)
+        .parent()
+        .parent()
+        .parent()
+        .parent()
+        .remove();
 
     pageCounter--;
-
-    let groups = $('*#buttonGroup');
 
     $('*#buttonGroup').each(function (index) {
         $(this).children("button").text("Sayfa " + (index + 1));
@@ -195,18 +216,26 @@ $('#multipleChoiceQuestionAddButton').on("click", function () {
 
 $(document).on('click', '#removeSectionButton', function(){
 
+    // tıklanılan section alanının numarasını bulma
     let number = $(this)
         .parent()
         .parent()
         .prev()
         .text();
-
     number = number.split(' ');
 
+    // tıklanılan section alanının numarasıyla control butonunu dikey hr silme
+    $('[href$="#section'+ number[1] + '"]')
+        .parent()
+        .prev()
+        .remove();
+
+    // tıklanılan section alanının numarasıyla control butonunu silme
     $('[href$="#section'+ number[1] + '"]')
         .parent()
         .remove();
 
+    // tıklanılan section alanını silme
     $(this)
         .parent()
         .parent()
