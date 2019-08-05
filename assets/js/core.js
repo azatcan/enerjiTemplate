@@ -151,12 +151,12 @@ $('.drop-menu').on("click", function () {
 
 });
 
-$(window).on("scroll", function () {
-    if ($(this).scrollTop() === 0)
-        $('#scrollBg').removeClass("header-bg");
-    else
-        $('#scrollBg').addClass("header-bg");
-});
+// $(window).on("scroll", function () {
+//     if ($(this).scrollTop() === 0)
+//         $('#scrollBg').removeClass("header-bg");
+//     else
+//         $('#scrollBg').addClass("header-bg");
+// });
 
 $('*[data-toggle="dropdown"]').click(function () {
     // $(this).next('.dropdown-menu').fadeToggle(300);

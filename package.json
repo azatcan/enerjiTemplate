@@ -17,7 +17,9 @@
 		"url": "https://github.com/sitahmetemin/enerjiTemplate/issues"
 	},
 	"homepage": "https://github.com/sitahmetemin/enerjiTemplate#readme",
-	"dependencies": {
+	"dependencies": {},
+	"devDependencies": {
+		"less": "^3.9.0",
 		"yuicompressor": "^2.4.8"
 	}
 }

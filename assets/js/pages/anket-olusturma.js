@@ -24,9 +24,9 @@ $('#newSectionButton').on('click', function () {
     $('#questionSectionForm')
         .append('<section id="section' + sectionCounter + '" class="section">' +
         '<div class="section-header">' +
-            '<h3 class="mr-auto">Bölüm ' + sectionCounter + '</h3>' +
+            '<h3 class="mr-auto my-2">Bölüm ' + sectionCounter + '</h3>' +
             '<div class="dropdown">\n' +
-            '<button class="btn waves-effect" type="button" id="dropdownSectionHeader" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\n' +
+            '<button class="btn waves-effect btn-sm" type="button" id="dropdownSectionHeader" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\n' +
             '<i class="fa fa-ellipsis-h"></i>\n' +
             '</button>\n' +
             '<div class="dropdown-menu dropdown-primary">\n' +
@@ -126,9 +126,9 @@ $('#newPageButton').on('click', function () {
             '<div id="questionSectionForm">\n' +
             '<section id="section1" class="section">\n' +
             '<div class="section-header">\n' +
-            '<h3 class="mr-auto">Bölüm 1</h3>\n' +
+            '<h3 class="mr-auto my-2">Bölüm 1</h3>\n' +
             '<div class="dropdown">\n' +
-            '<button class="btn waves-effect" type="button" id="dropdownSectionHeader" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\n' +
+            '<button class="btn waves-effect btn-sm" type="button" id="dropdownSectionHeader" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\n' +
             '<i class="fa fa-ellipsis-h"></i>\n' +
             '</button>\n' +
             '<div class="dropdown-menu dropdown-primary">\n' +

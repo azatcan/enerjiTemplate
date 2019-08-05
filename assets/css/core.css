@@ -280,15 +280,13 @@ b,strong{
         transition: all 0.3s ease;
         margin-left: 325px;
         margin-right: 25px;
-        margin-top: 8rem;
+        /*margin-top: 8rem;*/
     }
 
     .header {
-        transition: all 0.3s ease;
         margin-left: 325px;
         margin-right: 25px;
         height: 100px;
-        position: fixed;
         display: flex;
         top: 0;
         /* width: 80%; */
@@ -550,7 +548,6 @@ b,strong{
     background-color: #5cb85c;
     color: #f4f6f9;
     width: 100%;
-    padding: .5rem .3rem;
     border-radius: .8rem .8rem 0 0;
     display: flex;
 }
