@@ -119,6 +119,8 @@ $("#sidebarToggleButton").on("click", function () {
     $(' #logoLabel').toggleClass('hide-text');
     $('.menu-list a').toggleClass('ml-4');
     $('.menu-caret-icon').toggleClass('fa-caret-down');
+    $('.drop-menu').next().next().slideUp(300);
+
 
     $("*.drop").removeClass("show");
     $("*.menu-caret-icon").removeClass("fa-caret-right");
