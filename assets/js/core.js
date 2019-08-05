@@ -137,7 +137,8 @@ $("#notificationBoxButton").on("click", function () {
 
 $('.drop-menu').on("click", function () {
 
-    $(this).parent().children(".drop").toggleClass("show");
+    // $(this).parent().children(".drop").toggleClass("show");
+    $(this).parent().children(".drop").slideToggle(300);
     $(this).parent().children("i").toggleClass("fa-caret-right");
 
     // Menü kapalıyen açılma işlemi
