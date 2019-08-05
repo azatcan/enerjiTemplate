@@ -56,12 +56,14 @@ b,strong{
 }
 
 .menu-list>li {
+    transition: all .3s ease;
     margin-bottom: 2rem;
     text-transform: uppercase;
     padding-left: 10%;
     align-items: center;
     font-size: 1rem;
     display: inline-flexbox;
+
 }
 
 .menu-list>li:last-child {
@@ -206,17 +208,13 @@ b,strong{
         -ms-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
-        margin-top: 12rem;
+        margin-bottom: 5rem;
     }
 
     .header {
         height: 100px;
-        position: fixed;
-        top: 0;
         margin-left: 65px !important;
         z-index: 100;
-        right: 0;
-        left: 0;
     }
 }
 
@@ -280,7 +278,7 @@ b,strong{
         transition: all 0.3s ease;
         margin-left: 325px;
         margin-right: 25px;
-        /*margin-top: 8rem;*/
+        margin-bottom: 5rem;
     }
 
     .header {

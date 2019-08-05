@@ -113,7 +113,7 @@ question-type:active {
 
 .section-header{
     width: 100%;
-    border-radius: .6rem;
+    border-radius: .3rem;
     background-color: #5cb85c;
     color: #fff;
     padding: 0;
@@ -137,7 +137,7 @@ question-type:active {
 
 .section-control-area {
     position: sticky;
-    top: 125px;
+    top: 24px;
 }
 
 .section-control {
@@ -160,4 +160,24 @@ question-type:active {
 
 .btn-active-section{
     background-color: #5cb85c;
+}
+
+.footer-question-area{
+    position: fixed;
+    width: 25%;
+    height: 55px;
+    background: rgba(92, 184, 92, 1);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: .8rem .8rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.border-primary{
+    border-width: .2rem;
 }

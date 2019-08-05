@@ -282,16 +282,56 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <!--<div class="row">
             <div class="col-12">
                 <div class="element-section">
-                    <button id="newSectionButton" class="btn btn-success waves-effect mr-auto "><i class="fa fa-plus-circle"></i> Yeni Bölüm</button>
+                    &lt;!&ndash;<button id="newSectionButton" class="btn btn-success waves-effect mr-auto "><i class="fa fa-plus-circle"></i> Yeni Bölüm</button>&ndash;&gt;
                     <label for="">Hazırlanan soru adedi: 0</label>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 </main>
+<!-- Modal -->
+<div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="questionModalId" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Soru Ekleme</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <label for="">Sayfa seçiniz</label>
+                        <select class="form-control" id="selectPage">
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Bölüm seçiniz</label>
+                        <select class="form-control" id="selectSection">
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                <button type="button" class="btn btn-primary">Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer-question-area">
+    <button data-toggle="modal" data-target="#questionModal" class="btn btn-sm btn-outline-white"><i class="fa fa-plus-circle"></i>Soru Ekle</button>
+    <button id="newSectionButton" class="btn btn-outline-white btn-sm waves-effect  "><i class="fa fa-plus-circle"></i> Yeni Bölüm</button>
+</div>
 <button id="sidebarToggleButton" class="menu-toggle-button btn btn-circle waves-effect">
     <i class="fa fa-arrow-to-left"></i>
 </button>

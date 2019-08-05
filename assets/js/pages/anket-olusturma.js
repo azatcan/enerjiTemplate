@@ -55,10 +55,11 @@ $('.question-type').hover(function () {
 
 });
 
+// section seçme metodu
 $(document).on("click", ".section", function () {
 
-    $('.section').removeClass('border-primary');
-    $(this).addClass('border-primary');
+    $('.section').removeClass('border-primary shadow');
+    $(this).addClass('border-primary shadow');
 
 });
 
