@@ -599,3 +599,14 @@ b,strong{
     background: #fff;
     padding: 1rem ;
 }
+
+select{
+    width: 100%;
+    height: 38px;
+}
+
+.select2-selection{
+    height: 2.3rem !important;
+    display: flex !important;
+    align-items: center;
+}

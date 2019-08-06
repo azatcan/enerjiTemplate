@@ -17,7 +17,11 @@
     <link rel="stylesheet" href="./assets/css/core.min.css">
 
     <!-- page specific css  -->
+    <!--select2-->
+    <link rel="stylesheet" href="./assets/components/select2-4.0.8/dist/css/select2.min.css">
+    <!--custom-->
     <link rel="stylesheet" href="./assets/css/pages/anket-olusturma.min.css">
+
 </head>
 <body>
 <div class="loader block-screen">
@@ -311,11 +315,23 @@
                         </select>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mb-4">
                     <div class="col-12">
                         <label for="">Bölüm seçiniz</label>
                         <select class="form-control" id="selectSection">
                             <option value="1">1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Soru seçiniz</label>
+                        <select class="select2" id="selectQuestion">
+                            <option class="rounded-circle" value="1"><i class="fal fa-check-circle"></i> asfd</option>
+                            <option value="2"><i class="fal fa-check-circle"></i>dsf</option>
+                            <option value="3"><i class="fal fa-quote-right"></i>dsfgsdfg</option>
+                            <option value="4"><i class="fal fa-table"></i>sdfgsdf</option>
+                            <option value="5"><i class="fal fa-comments-alt"></i>sdfgsd</option>
                         </select>
                     </div>
                 </div>
@@ -347,8 +363,11 @@
 <script src="./assets/js/core.min.js"></script>
 
 <!-- page specific js -->
-<script src="./assets/js/pages/anket-olusturma.min.js"></script>
+<!--select2-->
+<script src="./assets/components/select2-4.0.8/dist/js/select2.full.min.js"></script>
+<script src="./assets/components/select2-4.0.8/dist/js/i18n/tr.min.js"></script>
 
-<!-- JS END -->
+<!--custom-->
+<script src="./assets/js/pages/anket-olusturma.min.js"></script>
 </body>
 </html>
