@@ -38,7 +38,7 @@
                         <i class="fal fa-bell fa-2x"></i>
                         <span>5</span>
                     </button>
-                    <div class="notification-box">
+                    <div class="notification-box float-right">
                         <div class="notification-title">
                             Bildirimler
                         </div>
@@ -50,18 +50,6 @@
                             </li>
                             <li class="notify">
                                 <a href="#">Bildirim 2</a><br>
-                                <small>Bidirim hakkında uzun ve kısa açıklamasından birtanesi</small>
-                            </li>
-                            <li class="notify">
-                                <a href="#">Bildirim 3</a><br>
-                                <small>Bidirim hakkında uzun ve kısa açıklamasından birtanesi</small>
-                            </li>
-                            <li class="notify">
-                                <a href="#">Bildirim 4</a><br>
-                                <small>Bidirim hakkında uzun ve kısa açıklamasından birtanesi</small>
-                            </li>
-                            <li class="notify">
-                                <a href="#">Bildirim 5</a><br>
                                 <small>Bidirim hakkında uzun ve kısa açıklamasından birtanesi</small>
                             </li>
                         </ul>
@@ -274,7 +262,6 @@
                         <label for="">Sayfa seçiniz</label>
                         <select class="form-control" id="selectPage">
                             <option value="1">1</option>
-                            <option value="2">2</option>
                         </select>
                     </div>
                 </div>
@@ -283,7 +270,6 @@
                         <label for="">Bölüm seçiniz</label>
                         <select class="form-control" id="selectSection">
                             <option value="1">1</option>
-                            <option value="2">2</option>
                         </select>
                     </div>
                 </div>
@@ -291,11 +277,11 @@
                     <div class="col-12">
                         <label for="">Soru seçiniz</label>
                         <select class="select2" id="selectQuestion">
-                            <option value="2">Çoktan Seçmeli Soru</option>
-                            <option value="3">Çoklu Seçim</option>
-                            <option value="4">Açıklama Metni</option>
-                            <option value="5">Tablo Yapısı</option>
-                            <option value="6">Açık Uçlu Soru</option>
+                            <option value="aciklama">Açıklama Metni</option>
+                            <option value="coktanSecmeli">Çoktan Seçmeli Soru</option>
+                            <option value="cokluSecim">Çoklu Seçim</option>
+                            <option value="table">Tablo Yapısı</option>
+                            <option value="acikUclu">Açık Uçlu Soru</option>
                         </select>
                     </div>
                 </div>
@@ -308,8 +294,8 @@
 </div>
 
 <div class="footer-question-area">
-    <button data-toggle="modal" data-target="#questionModal" class="btn btn-sm btn-outline-white"><i class="fa fa-plus-circle"></i>Soru Ekle</button>
-    <button id="newSectionButton" class="btn btn-outline-white btn-sm waves-effect  "><i class="fa fa-plus-circle"></i> Yeni Bölüm</button>
+    <button data-toggle="modal" data-target="#questionModal" class="btn btn-sm btn-outline-white no-wrap "><i class="fa fa-plus-circle"></i>Soru Ekle</button>
+    <button id="newSectionButton" class="btn btn-outline-white btn-sm waves-effect  no-wrap"><i class="fa fa-plus-circle"></i> Yeni Bölüm</button>
 </div>
 <button id="sidebarToggleButton" class="menu-toggle-button btn btn-circle waves-effect">
     <i class="fa fa-arrow-to-left"></i>

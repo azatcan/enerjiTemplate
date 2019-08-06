@@ -7,6 +7,8 @@ $('#newSectionButton').on('click', function () {
 
     sectionCounter++;
 
+    $('#selectSection').append('<option value="' + sectionCounter + '">' + sectionCounter + '</option>');
+
     $('#questionSectionForm')
         .append('<section id="section' + sectionCounter + '" class="section">' +
             '<div class="section-header">' +
@@ -57,7 +59,7 @@ $('#modalAddButton').click(function () {
     let pageNumber = $('#selectPage').select2('data')[0].id;
     let sectionNumber = $('#selectSection').select2('data')[0].id;
     let questionNumber = $('#selectQuestion').select2('data')[0].id;
-    // todo:burada kaldın
+
 });
 
 $(document).ready(function () {
@@ -75,6 +77,8 @@ $('#newPageButton').on('click', function () {
     if (pageCounter < 5) {
 
         pageCounter++;
+
+        $('#selectPage').append('<option value="' + pageCounter + '">' + pageCounter + '</option>');
 
         $('#pageControlSection')
             .append('<div class="d-flex align-items-center" id="buttonGroup">\n' +
@@ -171,6 +175,8 @@ $(document).on("click", "#removePageButton", function () {
         .prev()
         .data('pagecontrolnumber');
 
+    pageCounter--;
+
     $('[data-pagenumber="' + pageNumber + '"]').remove();
 
     $(this)
@@ -180,11 +186,15 @@ $(document).on("click", "#removePageButton", function () {
         .parent()
         .remove();
 
-    pageCounter--;
+    // $('*#buttonGroup').each(function (index) {
+    //     $(this).children("button").text("Sayfa " + (index + 1));
+    //     $(this).children("button").append('<i class="fa fa-ellipsis-h"></i>');
+    // });
 
-    $('*#buttonGroup').each(function (index) {
-        $(this).children("button").text("Sayfa " + (index + 1));
-        $(this).children("button").append('<i class="fa fa-ellipsis-h"></i>');
+    $('*#pageButton').each(function (index) {
+        index++;
+        $(this).data('pagecontrolnumber', index);
+        $(this).text(index);
     });
 
 });
@@ -288,6 +298,8 @@ $(document).on('click', '#removeSectionButton', function () {
         .parent()
         .parent()
         .remove();
+
+
 });
 
 $(document).on('change', '#descTextArea', function () {
