@@ -72,6 +72,43 @@ $(document).ready(function () {
 
 });
 
+$(document).on("click", "*#pageButton", function () {
+
+    $('*#pageButton').not(this).addClass('btn-light');
+    $('*#btnGroupDrop1').not(this).addClass('btn-light');
+
+    // Dropdown rengini ayaladım
+    $(this)
+        .next()
+        .children('button')
+        .removeClass('btn-light');
+
+    // üç noktaya success class ekleme
+    $(this)
+        .next()
+        .children('button')
+        .addClass('btn-success');
+
+    // bütün sayfaların isimlerini değiştirme
+    $('*#pageButton').each(function (index) {
+        let pageName = $(this).text().split(' ');
+        $(this).text(pageName[1]);
+    });
+
+    // page butonlerın rengini ayarladım
+    $(this).removeClass('btn-light');
+    $(this).addClass('btn-success');
+    $(this).text('Sayfa ' + $(this).text());
+
+
+    let pageNumber = $(this).attr('data-pagecontrolnumber');
+
+    $('.page').addClass('d-none');
+
+    $("[data-pagenumber='" + pageNumber + "']").removeClass('d-none');
+
+});
+
 $('#newPageButton').on('click', function () {
 
     if (pageCounter < 5) {
@@ -83,9 +120,9 @@ $('#newPageButton').on('click', function () {
         $('#pageControlSection')
             .append('<div class="d-flex align-items-center" id="buttonGroup">\n' +
                 '<div class="btn-group btn-group-sm mr-4" role="group">\n' +
-                '<button type="button" id="pageButton" data-pagecontrolnumber="' + pageCounter + '" class="btn btn-light btn-sm waves-effect">Sayfa ' + pageCounter + '</button>\n' +
+                '<button type="button" id="pageButton" data-pagecontrolnumber="' + pageCounter + '" class="btn btn-light btn-sm waves-effect main-button">' + pageCounter + '</button>\n' +
                 '<div class="btn-group" role="group">\n' +
-                '<button id="btnGroupDrop1" type="button" class="btn btn-light btn-circle btn-sm waves-effect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\n' +
+                '<button id="btnGroupDrop1" type="button" class="btn btn-light btn-circle btn-sm waves-effect group-drop-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\n' +
                 '<i class="fa fa-ellipsis-h"></i>\n' +
                 '</button>\n' +
                 '<div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">\n' +
@@ -139,34 +176,6 @@ $('#newPageButton').on('click', function () {
 
 });
 
-$(document).on("click", "*#pageButton", function () {
-
-    $('*#pageButton').not(this).addClass('btn-light');
-    $('*#btnGroupDrop1').not(this).addClass('btn-light');
-
-    // Dropdown rengini ayaladım
-    $(this)
-        .next()
-        .children('button')
-        .removeClass('btn-light');
-    $(this)
-        .next()
-        .children('button')
-        .addClass('btn-success');
-
-    // page butonlerın rengini ayarladım
-    $(this).removeClass('btn-light');
-    $(this).addClass('btn-success');
-
-
-    let pageNumber = $(this).data('pagecontrolnumber');
-
-    $('.page').addClass('d-none');
-
-    $("[data-pagenumber='" + pageNumber + "']").removeClass('d-none');
-
-});
-
 $(document).on("click", "#removePageButton", function () {
 
     let pageNumber = $(this)
@@ -174,8 +183,6 @@ $(document).on("click", "#removePageButton", function () {
         .parent()
         .prev()
         .data('pagecontrolnumber');
-
-    pageCounter--;
 
     $('[data-pagenumber="' + pageNumber + '"]').remove();
 
@@ -185,7 +192,6 @@ $(document).on("click", "#removePageButton", function () {
         .parent()
         .parent()
         .remove();
-
     // $('*#buttonGroup').each(function (index) {
     //     $(this).children("button").text("Sayfa " + (index + 1));
     //     $(this).children("button").append('<i class="fa fa-ellipsis-h"></i>');
@@ -193,9 +199,19 @@ $(document).on("click", "#removePageButton", function () {
 
     $('*#pageButton').each(function (index) {
         index++;
-        $(this).data('pagecontrolnumber', index);
+        // $(this).data('pagecontrolnumber', index);
+        $(this).attr("data-pagecontrolnumber", index);
         $(this).text(index);
     });
+
+    $('.page').each(function (index) {
+        index++;
+        $(this).attr("data-pagenumber", index);
+    });
+
+
+    pageCounter--;
+
 
 });
 
