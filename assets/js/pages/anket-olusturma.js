@@ -2,20 +2,6 @@
 var sectionCounter = 1;
 var pageCounter = 1;
 
-$('*#showQuestionPanel').on("click", function () {
-
-    $('.question-type-section')
-        .toggleClass("active-question-type-section");
-
-    $(this)
-        .toggleClass("text-success");
-
-    $('.question-type > i')
-        .toggleClass("border-0");
-
-    $('.question-type')
-        .toggleClass("border");
-});
 
 $('#newSectionButton').on('click', function () {
 
@@ -23,7 +9,7 @@ $('#newSectionButton').on('click', function () {
 
     $('#questionSectionForm')
         .append('<section id="section' + sectionCounter + '" class="section">' +
-        '<div class="section-header">' +
+            '<div class="section-header">' +
             '<h3 class="mr-auto my-2">Bölüm ' + sectionCounter + '</h3>' +
             '<div class="dropdown">\n' +
             '<button class="btn waves-effect btn-sm" type="button" id="dropdownSectionHeader" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\n' +
@@ -33,7 +19,7 @@ $('#newSectionButton').on('click', function () {
             '<a id="removeSectionButton" class="dropdown-item" href="javascript:void(0)">Sil</a>\n' +
             '</div>\n' +
             '</div>' +
-        '</section>');
+            '</section>');
 
     $('.section-control-area')
         .append('<hr class="section-hr">' +
@@ -42,26 +28,13 @@ $('#newSectionButton').on('click', function () {
             '</div>');
 });
 
-
-$('.question-type').hover(function () {
-
-    if (!$('.question-type-section').hasClass('active-question-type-section'))
-        $(this).children('.custom-tooltip').css('display', 'block');
-
-}, function () {
-
-    if (!$('.question-type-section').hasClass('active-question-type-section'))
-        $(this).children('.custom-tooltip').css('display', 'none');
-
-});
-
 // section seçme metodu
-$(document).on("click", ".section", function () {
-
-    $('.section').removeClass('border-primary shadow');
-    $(this).addClass('border-primary shadow');
-
-});
+// $(document).on("click", ".section", function () {
+//
+//     $('.section').removeClass('border-primary shadow');
+//     $(this).addClass('border-primary shadow');
+//
+// });
 
 $(document).on('click', '#appendAnswerInput', function () {
 
@@ -78,6 +51,13 @@ $(document).on("click", '*#removeAnswerInput', function () {
         .parent()
         .parent()
         .remove();
+});
+
+$('#modalAddButton').click(function () {
+    let pageNumber = $('#selectPage').select2('data')[0].id;
+    let sectionNumber = $('#selectSection').select2('data')[0].id;
+    let questionNumber = $('#selectQuestion').select2('data')[0].id;
+    // todo:burada kaldın
 });
 
 $(document).ready(function () {
@@ -179,7 +159,7 @@ $(document).on("click", "*#pageButton", function () {
 
     $('.page').addClass('d-none');
 
-    $( "[data-pagenumber='" + pageNumber + "']" ).removeClass('d-none');
+    $("[data-pagenumber='" + pageNumber + "']").removeClass('d-none');
 
 });
 
@@ -191,7 +171,7 @@ $(document).on("click", "#removePageButton", function () {
         .prev()
         .data('pagecontrolnumber');
 
-    $( '[data-pagenumber="' + pageNumber + '"]' ).remove();
+    $('[data-pagenumber="' + pageNumber + '"]').remove();
 
     $(this)
         .parent()
@@ -280,8 +260,7 @@ $('#multipleChoiceQuestionAddButton').on("click", function () {
 //     $(this).nextAll().slideToggle();
 // });
 
-
-$(document).on('click', '#removeSectionButton', function(){
+$(document).on('click', '#removeSectionButton', function () {
 
     // tıklanılan section alanının numarasını bulma
     let number = $(this)
@@ -292,13 +271,13 @@ $(document).on('click', '#removeSectionButton', function(){
     number = number.split(' ');
 
     // tıklanılan section alanının numarasıyla control butonunu dikey hr silme
-    $('[href$="#section'+ number[1] + '"]')
+    $('[href$="#section' + number[1] + '"]')
         .parent()
         .prev()
         .remove();
 
     // tıklanılan section alanının numarasıyla control butonunu silme
-    $('[href$="#section'+ number[1] + '"]')
+    $('[href$="#section' + number[1] + '"]')
         .parent()
         .remove();
 

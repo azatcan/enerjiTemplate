@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Anasayfa</title>
+    <title>Anket Oluşturma</title>
 
     <link rel="stylesheet" href="./assets/components/bootstrap-4.3.1/css/bootstrap.min.css">
 
@@ -29,44 +29,6 @@
     </div>
     <label class="mt-3" for="">Yükleniyor...</label>
 </div>
-<section class="question-type-section shadow">
-    <div class="question-type-bar-title d-flex">
-        <i id="showQuestionPanel" href="javascript:void(0)" class="fal fa-bars text-black fa-2x mr-0"></i>
-        <h3 class="">Soru Türü Seçiniz</h3>
-    </div>
-    <div class="d-flex flex-column">
-        <div class="question-type">
-            <i class="fal fa-ball-pile border"></i>
-            <div class="custom-tooltip">Çoktan Seçmeli Soru</div>
-            <span class="mr-auto" for="">Çoktan Seçmeli Soru</span>
-            <button id="multipleChoiceQuestionAddButton" class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
-        </div>
-        <div class="question-type">
-            <i class="fal fa-check-circle"></i>
-            <div class="custom-tooltip">Çoklu Seçim</div>
-            <span class="mr-auto" for="">Çoklu Seçim</span>
-            <button id="multiselectedQuestion" class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
-        </div>
-        <div class="question-type">
-            <i class="fal fa-quote-right"></i>
-            <div class="custom-tooltip">Açıklama Metni</div>
-            <span class="mr-auto" for="">Açıklama Metni</span>
-            <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
-        </div>
-        <div class="question-type">
-            <i class="fal fa-table"></i>
-            <div class="custom-tooltip">Tablo Yapısı</div>
-            <span class="mr-auto" for="">Tablo Yapısı</span>
-            <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
-        </div>
-        <div class="question-type">
-            <i class="fal fa-comments-alt"></i>
-            <div class="custom-tooltip">Açık Uçlu Soru</div>
-            <span class="mr-auto" for="">Açık Uçlu Soru</span>
-            <button class="btn btn-white waves-effect btn-sm btn-circle"><i class="fal fa-plus"></i></button>
-        </div>
-    </div>
-</section>
 <div class="header">
     <div class="container-fluid">
         <div id="scrollBg" class="row mt-3">
@@ -298,7 +260,7 @@
 </main>
 <!-- Modal -->
 <div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="questionModalId" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Soru Ekleme</h5>
@@ -312,6 +274,7 @@
                         <label for="">Sayfa seçiniz</label>
                         <select class="form-control" id="selectPage">
                             <option value="1">1</option>
+                            <option value="2">2</option>
                         </select>
                     </div>
                 </div>
@@ -320,6 +283,7 @@
                         <label for="">Bölüm seçiniz</label>
                         <select class="form-control" id="selectSection">
                             <option value="1">1</option>
+                            <option value="2">2</option>
                         </select>
                     </div>
                 </div>
@@ -327,18 +291,17 @@
                     <div class="col-12">
                         <label for="">Soru seçiniz</label>
                         <select class="select2" id="selectQuestion">
-                            <option class="rounded-circle" value="1"><i class="fal fa-check-circle"></i> asfd</option>
-                            <option value="2"><i class="fal fa-check-circle"></i>dsf</option>
-                            <option value="3"><i class="fal fa-quote-right"></i>dsfgsdfg</option>
-                            <option value="4"><i class="fal fa-table"></i>sdfgsdf</option>
-                            <option value="5"><i class="fal fa-comments-alt"></i>sdfgsd</option>
+                            <option value="2">Çoktan Seçmeli Soru</option>
+                            <option value="3">Çoklu Seçim</option>
+                            <option value="4">Açıklama Metni</option>
+                            <option value="5">Tablo Yapısı</option>
+                            <option value="6">Açık Uçlu Soru</option>
                         </select>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
-                <button type="button" class="btn btn-primary">Kaydet</button>
+                <button type="button" id="modalAddButton" class="btn btn-primary"><i class="fa fa-plus"></i> Ekle</button>
             </div>
         </div>
     </div>

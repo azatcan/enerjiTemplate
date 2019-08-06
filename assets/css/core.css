@@ -83,6 +83,10 @@ b,strong{
     color: #231f20;
 }
 
+.menu-list a:hover {
+    color: #5cb85c;
+}
+
 .menu-list a>label {
     cursor: pointer;
 }
@@ -94,10 +98,6 @@ b,strong{
 
 .menu-list .active {
     border-left: #66bb6a 5px solid;
-}
-
-.active i {
-    margin-left: -5px;
 }
 
 .menu-bar {
