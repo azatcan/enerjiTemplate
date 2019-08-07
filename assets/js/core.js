@@ -13,6 +13,7 @@ $(document).ready(function () {
 
             $("*.drop").removeClass("show");
             $("*.menu-caret-icon").removeClass("fa-caret-right");
+            $("*.menu-caret-icon").removeClass("fa-caret-down");
 
         } else {
             $("#sideBarContainer").addClass("active-sidebar");

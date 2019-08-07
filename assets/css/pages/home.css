@@ -1,1 +1,33 @@
-/* exampla */
+.home-button{
+    width: 250px;
+    height: 215px;
+    /*white-space: nowrap;*/
+    font-size: 1rem;
+    opacity: 0.7;
+
+}
+
+.home-button:hover{
+    transition: all .3s ease;
+    color: #5cb85c;
+    /*font-weight: bold;*/
+    opacity: 1;
+}
+
+.home-button > i{
+    font-size: 8rem !important;
+    margin-bottom: 1rem;
+}
+
+
+@media only screen and(max-width: 768px) {
+    .mt-10{
+        margin-top: 3rem;
+    }
+}
+
+@media only screen and(min-width: 769px) {
+    .mt-10{
+        margin-top: 10rem;
+    }
+}

@@ -6,10 +6,13 @@ var pageCounter = 1;
 $('#newSectionButton').on('click', function () {
 
     sectionCounter++;
+    let activePage = $('*#pageButton.btn-success').attr('data-pagecontrolnumber');
 
     $('#selectSection').append('<option value="' + sectionCounter + '">' + sectionCounter + '</option>');
 
-    $('#questionSectionForm')
+    // $('#questionSectionForm')
+    $('[data-pagenumber="' + activePage + '"]')
+        .find('#questionSectionForm')
         .append('<section id="section' + sectionCounter + '" class="section">' +
             '<div class="section-header">' +
             '<h3 class="mr-auto my-2">Bölüm ' + sectionCounter + '</h3>' +
@@ -23,7 +26,9 @@ $('#newSectionButton').on('click', function () {
             '</div>' +
             '</section>');
 
-    $('.section-control-area')
+    // $('.section-control-area')
+    $('[data-pagenumber="' + activePage + '"]')
+        .find('.section-control-area')
         .append('<hr class="section-hr">' +
             '<div class="section-control">' +
             '<a href="#section' + sectionCounter + '" class="btn btn-light btn-sm">' + sectionCounter + '</a>' +
@@ -74,8 +79,8 @@ $(document).ready(function () {
 
 $(document).on("click", "*#pageButton", function () {
 
-    $('*#pageButton').not(this).addClass('btn-light');
-    $('*#btnGroupDrop1').not(this).addClass('btn-light');
+    $('*#pageButton').addClass('btn-light').removeClass('btn-success');
+    $('*#btnGroupDrop1').addClass('btn-light').removeClass('btn-success');
 
     // Dropdown rengini ayaladım
     $(this)
@@ -139,38 +144,33 @@ $('#newPageButton').on('click', function () {
         $('#pageArea').append('<div data-pagenumber="' + pageCounter + '" class="row page">\n' +
             '<div class="col-1 d-flex flex-column align-items-center">\n' +
             '<div class="section-control-area">\n' +
-            '<div class="section-control">\n' +
-            '<a href="#section1" class="btn btn-light btn-sm btn-active-section">1</a>\n' +
-            '</div>\n' +
             '</div>\n' +
             '</div>\n' +
             '<div class="col-11 questions">\n' +
             '<div id="questionSectionForm">\n' +
-            '<section id="section1" class="section">\n' +
-            '<div class="section-header">\n' +
-            '<h3 class="mr-auto my-2">Bölüm 1</h3>\n' +
-            '<div class="dropdown">\n' +
-            '<button class="btn waves-effect btn-sm" type="button" id="dropdownSectionHeader" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\n' +
-            '<i class="fa fa-ellipsis-h"></i>\n' +
-            '</button>\n' +
-            '<div class="dropdown-menu dropdown-primary">\n' +
-            '<a id="removeSectionButton" class="dropdown-item" href="javascript:void(0)">Sil</a>\n' +
-            '</div>\n' +
-            '</div>\n' +
-            '</div>\n' +
-            '</section>\n' +
             '</div>\n' +
             '</div>\n' +
             '</div>');
 
-        $('*#pageButton').not(this).addClass('btn-light');
-        $('*#btnGroupDrop1').not(this).addClass('btn-light');
+        $('*#pageButton')
+            .not(this)
+            .addClass('btn-light')
+            .removeClass('btn-success');
 
-        $('*#pageButton').last().removeClass('btn-light');
-        $('*#btnGroupDrop1').last().removeClass('btn-light');
+        $('*#btnGroupDrop1')
+            .not(this)
+            .addClass('btn-light')
+            .removeClass('btn-success');
 
-        $('*#pageButton').last().addClass('btn-success');
-        $('*#btnGroupDrop1').last().addClass('btn-success');
+        $('*#pageButton')
+            .last()
+            .removeClass('btn-light')
+            .addClass('btn-success');
+
+        $('*#btnGroupDrop1')
+            .last()
+            .removeClass('btn-light')
+            .addClass('btn-success');
 
     }
 
@@ -192,6 +192,7 @@ $(document).on("click", "#removePageButton", function () {
         .parent()
         .parent()
         .remove();
+
     // $('*#buttonGroup').each(function (index) {
     //     $(this).children("button").text("Sayfa " + (index + 1));
     //     $(this).children("button").append('<i class="fa fa-ellipsis-h"></i>');
@@ -316,6 +317,11 @@ $(document).on('click', '#removeSectionButton', function () {
         .remove();
 
 
+});
+
+$('#selectPage').on('change', function (e) {
+    // alert($(this).text());
+    $('#selectPage').select2('data')[0].id;
 });
 
 $(document).on('change', '#descTextArea', function () {
