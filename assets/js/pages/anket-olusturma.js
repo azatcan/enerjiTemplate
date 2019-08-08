@@ -48,7 +48,6 @@ $(document).on('click', '#appendAnswerInput', function () {
     $(this)
         .parent()
         .prev()
-        .prev()
         .append('<div class="input-group mb-4"><div class="input-group-prepend"><span class="input-group-text" id="basic-addon1">Yanıt Giriniz</span></div><input type="text" class="form-control"><div class="input-group-append"><button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button" id="button-addon2"><i class="fa fa-minus"></i></button></div></div>');
 
 });
@@ -61,10 +60,184 @@ $(document).on("click", '*#removeAnswerInput', function () {
 });
 
 $('#modalAddButton').click(function () {
-    let pageNumber = $('#selectPage').select2('data')[0].id;
+    // let pageNumber = $('#selectPage').select2('data')[0].id;
     let sectionNumber = $('#selectSection').select2('data')[0].id;
-    let questionNumber = $('#selectQuestion').select2('data')[0].id;
+    let questionType = $('#selectQuestion').select2('data')[0].id;
 
+    if (questionType === "aciklama") {
+        $('#section' + sectionNumber)
+            .append('<section class="question-area">\n' +
+            '<div class="row head">\n' +
+            '<div class="col-12 d-flex align-items-center">\n' +
+            '<label class="label mr-auto label-success fs-x1-5" for="">Açıklama</label>\n' +
+            '<button style="display: none" type="button" class="btn btn-white btn-outline-success btn-sm waves-effect headButton"><i class="fal fa-edit text-success"></i>Düzenle</button>\n' +
+            '<button style="display: none" type="button" class="btn btn-white btn-outline-success btn-sm waves-effect headButton"><i class="fal fa-bars text-success"></i>Seçenekler</button>\n' +
+            '</div>\n' +
+            '</div>\n' +
+            '<hr>\n' +
+            '<div class="row">\n' +
+            '<div id="answerSection" class="col-12">\n' +
+            '<div class="input-group mb-4">\n' +
+            '<div class="input-group-prepend">\n' +
+            '<span class="input-group-text">Açıklama Yazınız</span>\n' +
+            '</div>\n' +
+            '<input type="text" class="form-control">\n' +
+            '</div>\n' +
+            '</div>\n' +
+            '</div>\n' +
+            '</section>')
+    } else if (questionType === "coktanSecmeli") {
+        $('#section' + sectionNumber)
+            .append('<section class="question-area">\n' +
+                '<div class="row">\n' +
+                '<div class="col-12 d-flex justify-content-center align-items-center">\n' +
+                '<label class="label label-success fs-x1-5 mr-auto" for="">Çoktan Seçmeli</label>\n' +
+                '<button style="display: none" type="button" class="btn btn-white btn-outline-success waves-effect btn-sm headButton"><i class="fal fa-edit text-success"></i>Düzenle</button>\n' +
+                '<button style="display: none" type="button" class="btn btn-white btn-outline-success waves-effect btn-sm headButton"><i class="fal fa-bars text-success"></i>Seçenekler</button>\n' +
+                '</div>\n' +
+                '</div>\n' +
+                '<hr>\n' +
+                '<div class="row">\n' +
+                '<div id="answerSection" class="col-12">\n' +
+                '<div class="input-group mb-4">\n' +
+                '<div class="input-group-prepend">\n' +
+                '<span class="input-group-text">Soru Yazınız</span>\n' +
+                '</div>\n' +
+                '<input type="text" class="form-control">\n' +
+                '</div>\n' +
+                '<div class="input-group mb-4">\n' +
+                '<div class="input-group-prepend">\n' +
+                '<span class="input-group-text">Yanıt Giriniz</span>\n' +
+                '</div>\n' +
+                '<input type="text" class="form-control">\n' +
+                '<div class="input-group-append">\n' +
+                '<button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button"><i class="fa fa-minus"></i></button>\n' +
+                '</div>\n' +
+                '</div>\n' +
+                '<div class="input-group mb-4">\n' +
+                '<div class="input-group-prepend">\n' +
+                '<span class="input-group-text" id="basic-addon1">Yanıt Giriniz</span>\n' +
+                '</div>\n' +
+                '<input type="text" class="form-control">\n' +
+                '<div class="input-group-append">\n' +
+                '<button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button"><i class="fa fa-minus"></i></button>\n' +
+                '</div>\n' +
+                '</div>\n' +
+                '<div class="input-group mb-4">\n' +
+                '<div class="input-group-prepend">\n' +
+                '<span class="input-group-text" id="basic-addon1">Yanıt Giriniz</span>\n' +
+                '</div>\n' +
+                '<input type="text" class="form-control">\n' +
+                '<div class="input-group-append">\n' +
+                '<button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button"><i class="fa fa-minus"></i></button>\n' +
+                '</div>\n' +
+                '</div>\n' +
+                '</div>\n' +
+                '<div class="col-12">\n' +
+                '<a id="appendAnswerInput" class=""><i class="fal fa-plus-circle mr-2"></i>Başka bir seçenek ekleniyiz</a>\n' +
+                '</div>\n' +
+                '</div>\n' +
+                '</section>')
+    } else if (questionType === "cokluSecim") {
+        $('#section' + sectionNumber)
+            .append('<section class="question-area">\n' +
+                '<div class="row">\n' +
+                '<div class="col-12 d-flex justify-content-center align-items-center">\n' +
+                '<label class="label label-success fs-x1-5 mr-auto" for="">Çoklu Seçim</label>\n' +
+                '<button style="display: none;" type="button" class="btn btn-white btn-outline-success waves-effect btn-sm headButton"><i class="fal fa-edit text-success"></i>Düzenle</button>\n' +
+                '<button style="display: none;" type="button" class="btn btn-white btn-outline-success waves-effect btn-sm headButton"><i class="fal fa-bars text-success"></i>Seçenekler</button>\n' +
+                '</div>\n' +
+                '</div>\n' +
+                '<hr>\n' +
+                '<div class="row">\n' +
+                '<div id="answerSection" class="col-12">\n' +
+                '<div class="input-group mb-4">\n' +
+                '<div class="input-group-prepend">\n' +
+                '<span class="input-group-text">Soru Yazınız</span>\n' +
+                '</div>\n' +
+                '<input type="text" class="form-control">\n' +
+                '</div>\n' +
+                '<div class="input-group mb-4">\n' +
+                '<div class="input-group-prepend">\n' +
+                '<span class="input-group-text">Yanıt Giriniz</span>\n' +
+                '</div>\n' +
+                '<input type="text" class="form-control">\n' +
+                '<div class="input-group-append">\n' +
+                '<button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button"><i class="fa fa-minus"></i></button>\n' +
+                '</div>\n' +
+                '</div>\n' +
+                '<div class="input-group mb-4">\n' +
+                '<div class="input-group-prepend">\n' +
+                '<span class="input-group-text" id="basic-addon1">Yanıt Giriniz</span>\n' +
+                '</div>\n' +
+                '<input type="text" class="form-control">\n' +
+                '<div class="input-group-append">\n' +
+                '<button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button"><i class="fa fa-minus"></i></button>\n' +
+                '</div>\n' +
+                '</div>\n' +
+                '<div class="input-group mb-4">\n' +
+                '<div class="input-group-prepend">\n' +
+                '<span class="input-group-text" id="basic-addon1">Yanıt Giriniz</span>\n' +
+                '</div>\n' +
+                '<input type="text" class="form-control">\n' +
+                '<div class="input-group-append">\n' +
+                '<button id="removeAnswerInput" class="btn btn-md btn-outline-danger m-0 px-3 py-2 z-depth-0 waves-effect" type="button"><i class="fa fa-minus"></i></button>\n' +
+                '</div>\n' +
+                '</div>\n' +
+                '</div>\n' +
+                '<div class="col-12">\n' +
+                '<a id="appendAnswerInput" class=""><i class="fal fa-plus-circle mr-2"></i>Başka bir seçenek ekleniyiz</a>\n' +
+                '</div>\n' +
+                '</div>\n' +
+                '</section>')
+    } else if (questionType === "tablo") {
+        $('#section' + sectionNumber)
+            .append('')
+    } else if (questionType === "acikUclu") {
+        $('#section' + sectionNumber)
+            .append('<section class="question-area">\n' +
+                '<div class="row head">\n' +
+                '<div class="col-12 d-flex align-items-center">\n' +
+                '<label class="label mr-auto label-success fs-x1-5" for="">Açık Uçlu</label>\n' +
+                '<button style="display: none" type="button" class="btn btn-white btn-outline-success btn-sm waves-effect headButton"><i class="fal fa-edit text-success"></i>Düzenle</button>\n' +
+                '<button style="display: none" type="button" class="btn btn-white btn-outline-success btn-sm waves-effect headButton"><i class="fal fa-bars text-success"></i>Seçenekler</button>\n' +
+                '</div>\n' +
+                '</div>\n' +
+                '<hr>\n' +
+                '<div class="row">\n' +
+                '<div id="answerSection" class="col-12">\n' +
+                '<div class="input-group mb-4">\n' +
+                '<div class="input-group-prepend">\n' +
+                '<span class="input-group-text">Sorunuzu Yazınız</span>\n' +
+                '</div>\n' +
+                '<input type="text" class="form-control">\n' +
+                '</div>\n' +
+                '</div>\n' +
+                '</div>\n' +
+                '</section>')
+    }
+
+});
+
+/*$(document).on('hover', '.question-area', function () {
+    $(this).find('#questionButtonArea').removeClass('d-none').addClass('d-flex');
+});*/
+
+// $('.headButton').on({
+//     mouseenter: function () {
+//         $(this).find('.headButton').fadeIn();
+//     },
+//     mouseleave: function () {
+//         $(this).find('.headButton').fadeOut();
+//     }
+// }, '.question-area');
+
+$(document).on('mouseenter', '.question-area', function () {
+    $(this).find('.headButton').fadeIn();
+});
+
+$(document).on('mouseleave', '.question-area', function () {
+    $(this).find('.headButton').fadeOut();
 });
 
 $(document).ready(function () {
@@ -321,7 +494,14 @@ $(document).on('click', '#removeSectionButton', function () {
 
 $('#selectPage').on('change', function (e) {
     // alert($(this).text());
-    $('#selectPage').select2('data')[0].id;
+    let pageNumber = $('#selectPage').select2('data')[0].id;
+    let sections = $('[data-pagenumber="' + pageNumber + '"]').find('.mr-auto.my-2');
+    $('#selectSection').empty();
+    sections.each(function (index) {
+        let secName = $(this).text();
+        secName = secName.split(' ');
+        $('#selectSection').append('<option value="' + secName[1] + '">' + secName[1] + '</option>')
+    });
 });
 
 $(document).on('change', '#descTextArea', function () {

@@ -1,0 +1,20 @@
+<section class="question-area">
+    <div class="row head">
+        <div class="col-12 d-flex align-items-center">
+            <label class="label mr-auto label-success fs-x1-5" for="">Açıklama</label>
+            <button style="display: none;" type="button" class="btn btn-white btn-outline-success btn-sm waves-effect headButton"><i class="fal fa-edit text-success"></i>Düzenle</button>
+            <button style="display: none;" type="button" class="btn btn-white btn-outline-success btn-sm waves-effect headButton"><i class="fal fa-bars text-success"></i>Seçenekler</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div id="answerSection" class="col-12">
+            <div class="input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Açıklama Yazınız</span>
+                </div>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+    </div>
+</section>
