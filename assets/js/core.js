@@ -126,12 +126,14 @@ $("#sidebarToggleButton").on("click", function () {
     $('.menu-list label').toggleClass('hide-text');
     $(' #logoLabel').toggleClass('hide-text');
     $('.menu-list a').toggleClass('ml-4');
-    $('.menu-caret-icon').toggleClass("fa-minus").toggleClass("fa-plus");
     $('.drop-menu').next().next().slideUp(300);
+    $("*.menu-caret-icon").toggleClass("fa-plus");
 
 
     $("*.drop").removeClass("show");
-    $("*.menu-caret-icon").removeClass("fa-minus");
+
+    if (!$("#sideBarContainer").hasClass("active-sidebar"))
+        $("*.menu-caret-icon").removeClass("fa-minus fa-plus");
 
     if ($("#sideBarContainer").hasClass("active-sidebar")) {
         localStorage.setItem("menuStatus", "show");
