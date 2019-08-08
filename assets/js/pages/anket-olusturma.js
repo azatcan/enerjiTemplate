@@ -219,19 +219,6 @@ $('#modalAddButton').click(function () {
 
 });
 
-/*$(document).on('hover', '.question-area', function () {
-    $(this).find('#questionButtonArea').removeClass('d-none').addClass('d-flex');
-});*/
-
-// $('.headButton').on({
-//     mouseenter: function () {
-//         $(this).find('.headButton').fadeIn();
-//     },
-//     mouseleave: function () {
-//         $(this).find('.headButton').fadeOut();
-//     }
-// }, '.question-area');
-
 $(document).on('mouseenter', '.question-area', function () {
     $(this).find('.headButton').fadeIn();
 });
@@ -295,10 +282,15 @@ $('#newPageButton').on('click', function () {
 
         $('#selectPage').append('<option value="' + pageCounter + '">' + pageCounter + '</option>');
 
+        $('*#pageButton').each(function (index) {
+            let pageName = $(this).text().split(' ');
+            $(this).text(pageName[1]);
+        });
+
         $('#pageControlSection')
             .append('<div class="d-flex align-items-center" id="buttonGroup">\n' +
                 '<div class="btn-group btn-group-sm mr-4" role="group">\n' +
-                '<button type="button" id="pageButton" data-pagecontrolnumber="' + pageCounter + '" class="btn btn-light btn-sm waves-effect main-button">' + pageCounter + '</button>\n' +
+                '<button type="button" id="pageButton" data-pagecontrolnumber="' + pageCounter + '" class="btn btn-light btn-sm waves-effect main-button">Sayfa ' + pageCounter + '</button>\n' +
                 '<div class="btn-group" role="group">\n' +
                 '<button id="btnGroupDrop1" type="button" class="btn btn-light btn-circle btn-sm waves-effect group-drop-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\n' +
                 '<i class="fa fa-ellipsis-h"></i>\n' +
