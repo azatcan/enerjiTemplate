@@ -145,11 +145,11 @@ $("#notificationBoxButton").on("click", function () {
     // $(".notification-box").slideToggle();
 });
 
-$('.drop-menu').on("click", function () {
+$('.drop-menu:parent').on("click", function () {
 
     // $(this).parent().children(".drop").toggleClass("show");
     $(this).parent().children(".drop").slideToggle(300);
-    $(this).parent().children("i").toggleClass("fa-caret-right");
+    $(this).parent().children("i").toggleClass("fa-minus").toggleClass("fa-plus");
 
     // Menü kapalıyen açılma işlemi
     if (!$("#sideBarContainer").hasClass("active-sidebar")) {
