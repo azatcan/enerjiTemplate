@@ -7,7 +7,7 @@
 }
 
 .section,
-.section-desc{
+.section-desc {
     min-height: 150px;
     width: 100%;
     background-color: #eaeaea;
@@ -17,7 +17,7 @@
     margin-top: 16px;
 }
 
-.section-header{
+.section-header {
     width: 100%;
     border-radius: .3rem;
     background-color: #5cb85c;
@@ -27,7 +27,7 @@
     align-items: center;
 }
 
-.section-header > h3{
+.section-header > h3 {
     margin-left: 1rem;
 }
 
@@ -55,42 +55,23 @@
     align-items: center;
 }
 
-.section-control>a {
+.section-control > a {
     padding: .5rem 1rem !important;
 }
 
 .section-hr {
-    transform:rotate(90deg);
+    transform: rotate(90deg);
     margin: 1rem;
 }
 
-.btn-active-section{
+.btn-active-section {
     background-color: #5cb85c;
 }
 
-@media only screen and (max-width:768px) {
-    .footer-question-area{
+@media only screen and (max-width: 768px) {
+    .survey-control-area {
         position: fixed;
-        width: 80%;
-        height: 55px;
-        background: rgba(92, 184, 92, 1);
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        border-radius: .8rem .8rem 0 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        z-index: 10;
-    }
-
-}
-@media only screen and (min-width:769px) {
-    .footer-question-area{
-        position: fixed;
-        width: 50%;
+        width: 100%;
         height: 55px;
         background: rgba(92, 184, 92, 1);
         left: 0;
@@ -107,6 +88,38 @@
 
 }
 
-.border-primary{
+@media only screen and (min-width: 769px) {
+    .survey-control-area {
+        position: fixed;
+        width: 70%;
+        height: 55px;
+        background: rgba(92, 184, 92, 1);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        border-radius: .8rem .8rem 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        z-index: 10;
+    }
+
+}
+
+.border-primary {
     border-width: .2rem;
+}
+
+.survey-control-area span {
+    border: #fff solid 1px;
+    padding: .1rem .5rem;
+    border-radius: .2rem;
+    margin-left: .2rem;
+    /*background-color: #fff;
+    color: #0c0c0c;*/
+}
+.survey-control-area label {
+    margin-bottom: 0;
 }

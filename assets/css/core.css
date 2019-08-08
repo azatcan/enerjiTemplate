@@ -144,8 +144,8 @@ b,strong{
 }
 
 .hide-text {
+    /*transition: all 1s ease;*/
     display: none;
-    transition: 1s;
 }
 
 .lbl {
