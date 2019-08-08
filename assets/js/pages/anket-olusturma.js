@@ -349,8 +349,10 @@ $(document).on("click", "#removePageButton", function () {
         .prev()
         .data('pagecontrolnumber');
 
+    // sayfa silme işlemi
     $('[data-pagenumber="' + pageNumber + '"]').remove();
 
+    // sayfa butonu silme işlemi
     $(this)
         .parent()
         .parent()
@@ -358,27 +360,27 @@ $(document).on("click", "#removePageButton", function () {
         .parent()
         .remove();
 
-    // $('*#buttonGroup').each(function (index) {
-    //     $(this).children("button").text("Sayfa " + (index + 1));
-    //     $(this).children("button").append('<i class="fa fa-ellipsis-h"></i>');
-    // });
-
     $('*#pageButton').each(function (index) {
         index++;
-        // $(this).data('pagecontrolnumber', index);
         $(this).attr("data-pagecontrolnumber", index);
         $(this).text(index);
     });
+
+    $('*#pageButton').last().text('Sayfa ' + $('*#pageButton').last().text());
 
     $('.page').each(function (index) {
         index++;
         $(this).attr("data-pagenumber", index);
     });
 
-
     pageCounter--;
 
-
+    // modal page işlemleri
+    $('#selectPage').empty();
+    $('*#pageButton').each(function (index) {
+        index++;
+        $('#selectPage').append('<option value="' + index + '">' + index + '</option>');
+    });
 });
 
 $('#multipleChoiceQuestionAddButton').on("click", function () {
