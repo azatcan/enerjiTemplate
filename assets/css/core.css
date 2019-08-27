@@ -200,6 +200,7 @@ b,strong{
         padding-right: 1.1rem;
         z-index: 101;
         background-color: #ffffff;
+        border: #d3d3d3  solid 1px;
     }
 
     main {
@@ -268,6 +269,7 @@ b,strong{
         padding-left: 1.1rem;
         padding-right: 1.1rem;
         z-index: 11;
+        border: #d3d3d3  solid 1px;
     }
 
     main {
