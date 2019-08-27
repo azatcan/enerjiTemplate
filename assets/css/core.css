@@ -319,7 +319,6 @@ b,strong{
     transition: all 0.3s ease;
     display: none;
     position: absolute;
-    right: 10.5rem;
     width: 300px;
     max-height: 400px;
     overflow-y: auto;

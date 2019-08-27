@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mail Oluştur</title>
+
+    <link rel="stylesheet" href="./assets/components/bootstrap-4.3.1/css/bootstrap.min.css">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="./assets/components/fontawesome-pro-5.8.2/css/all.min.css">
+
+    <!-- Material Css -->
+    <link rel="stylesheet" href="./assets/components/mdb-v4.8.7/css/mdb.min.css">
+
+    <!-- page specific css -->
+    <link rel="stylesheet" href="./assets/components/DataTables/datatables.min.css">
+    <link rel="stylesheet" href="./assets/components/select2-4.0.8/dist/css/select2.min.css">
+    <link rel="stylesheet" href="./assets/css/core.min.css">
+</head>
+<body>
+<div class="loader block-screen">
+    <div class="spinner-border text-success" role="status">
+    </div>
+    <label class="mt-3" for="">Yükleniyor...</label>
+</div>
+<div class="header">
+    <div class="container-fluid">
+        <div id="scrollBg" class="row mt-3">
+            <div class="col-12 d-flex justify-content-end align-items-center">
+                <div class="notification">
+                    <button id="notificationBoxButton" class="btn btn-email notify-button waves-effect btn-sm">
+                        <i class="fal fa-bell fa-2x"></i>
+                        <span>5</span>
+                    </button>
+                    <div class="notification-box">
+                        <div class="notification-title">
+                            Bildirimler
+                        </div>
+                        <hr>
+                        <ul>
+                            <li class="notify">
+                                <a href="#">Bildirim 1</a><br>
+                                <small>Bidirim hakkında uzun ve kısa açıklamasından birtanesi</small>
+                            </li>
+                            <li class="notify">
+                                <a href="#">Bildirim 2</a><br>
+                                <small>Bidirim hakkında uzun ve kısa açıklamasından birtanesi</small>
+                            </li>
+                            <li class="notify">
+                                <a href="#">Bildirim 3</a><br>
+                                <small>Bidirim hakkında uzun ve kısa açıklamasından birtanesi</small>
+                            </li>
+                            <li class="notify">
+                                <a href="#">Bildirim 4</a><br>
+                                <small>Bidirim hakkında uzun ve kısa açıklamasından birtanesi</small>
+                            </li>
+                            <li class="notify">
+                                <a href="#">Bildirim 5</a><br>
+                                <small>Bidirim hakkında uzun ve kısa açıklamasından birtanesi</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn text-nowrap dropdown-toggle waves-effect btn-sm" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="https://img.icons8.com/color/1600/circled-user-male-skin-type-1-2.png" width="25" height="25" alt=""> Ahmet Emin
+                    </button>
+                    <div class="dropdown-menu dropdown-primary">
+                        <a class="dropdown-item" href="#">Profil</a>
+                        <a class="dropdown-item" href="login.html">Çıkış Yap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="sideBarContainer" class="side-bar active-sidebar shadow">
+    <div class="logo-container">
+        <img src="./assets/images/logo.png" alt="">
+        <label id="logoLabel" class="text-uppercase text-danger bold mb-0" for="">T.C. Enerji ve Tabii kaynaklar bakanlığı</label>
+    </div>
+    <hr>
+    <div class="menu-container">
+        <ul class="menu-list">
+            <label class="menu-group-title">Menü Grup</label>
+            <li>
+                <a href="index.html" data-title="Anasayfa">
+                    <i class=" far fa-home"></i>
+                    <label>
+                        Anasayfa
+                    </label>
+                </a>
+            </li>
+            <li>
+                <a href="anket-olusturma.html">
+                    <i class=" far fa-user"></i>
+                    <label>
+                        Anket Oluşturma
+                    </label>
+                </a>
+            </li>
+            <li>
+                <a href="anket-olusturma-sayfa2.html">
+                    <i class=" far fa-copy"></i>
+                    <label>
+                        Anket Oluşturma Sayfa 2
+                    </label>
+                </a>
+            </li>
+            <li class="active">
+                <a href="List.html">
+                    <i class=" far fa-pencil"></i>
+                    <label>
+                        Liste Sayfası
+                    </label>
+                </a>
+            </li>
+            <label class="menu-group-title">Açılır Listeler</label>
+            <li>
+                <a class="drop-menu" href="#">
+                    <i class="far fa-map"></i>
+                    <label>
+                        açılır liste 1
+                    </label>
+                </a>
+                <i class="menu-caret-icon float-right fal fa-plus"></i>
+                <ul class="drop">
+                    <li class="drop-item"><a href="">alt menü 1</a></li>
+                    <li class="drop-item"><a href="">alt menü 1</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div id="breadcrumb" class="mt-md-5 mt-lg-0 d-flex align-items-center">
+                    <div class="mr-auto">
+                        <h2 class="bold">Anket Başlık Bilgisi</h2>
+                        <span>Anasayfa</span>
+                        <span>Anket Oluştur</span>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="">Oluşturma Tarihi: <strong id="showDate">27.8.2019</strong></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-4">
+                <select name="" id="">
+                    <option selected disabled>Alan Seçimi</option>
+                    <option value="değer">içerik</option>
+                    <option value="değer">içerik2</option>
+                    <option value="değer">içerik23</option>
+                    <option value="değer">içerik234</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="content-section">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <label for="">Başlık</label>
+                            <input type="text" class="form-control" />
+                        </div>
+                        <div class="col-12">
+                            <label for="">içerik</label>
+                            <textarea name="" id="" class="form-control" rows="10"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mt-2">
+                    <button class="float-right btn btn-success">Kaydet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<button id="sidebarToggleButton" class="menu-toggle-button btn btn-circle waves-effect waves-effect">
+    <i class="fa fa-arrow-to-left"></i>
+</button>
+<!-- JS Start -->
+<script src="./assets/components/jquery/jquery-3.4.1.min.js"></script>
+<script src="./assets/components/popover/popover.js"></script>
+
+<script src="./assets/components/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+
+<!-- Material js -->
+<script src="./assets/components/mdb-v4.8.7/js/mdb.min.js"></script>
+
+<script src="./assets/js/core.min.js"></script>
+
+<!-- page specific js -->
+<!--datatable-->
+<script src="./assets/components/DataTables/datatables.min.js"></script>
+<!--select2-->
+<script src="./assets/components/select2-4.0.8/dist/js/select2.full.min.js"></script>
+<script src="./assets/components/select2-4.0.8/dist/js/i18n/tr.min.js"></script>
+
+<!--custom-->
+<script src="./assets/js/pages/list.min.js"></script>
+
+</body>
+</html>
