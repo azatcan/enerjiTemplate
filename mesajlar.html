@@ -156,32 +156,213 @@
         </div>
         <hr>
         <div class="row">
-            <div class="col-4">
-                <select name="" id="">
-                    <option selected disabled>Alan Seçimi</option>
-                    <option value="değer">içerik</option>
-                    <option value="değer">içerik2</option>
-                    <option value="değer">içerik23</option>
-                    <option value="değer">içerik234</option>
-                </select>
+            <!--<div class="col-sm-12 col-md-2">
+                <div class="content-section">
+                    <div><i class="fal fa-envelope"></i><a href="#">Gelen Mesajlar</a></div>
+                    <hr>
+                    <div><i class="fal fa-envelope"></i><a href="#">Silinen Mesajlar</a></div>
+                </div>
             </div>
+            <div class="col-sm-12 col-md-10">
+                <div class="content-section">
+                </div>
+            </div>-->
         </div>
         <div class="row">
-            <div class="col-12">
-                <div class="content-section">
-                    <div class="row">
-                        <div class="col-12 mb-3">
-                            <label for="">Başlık</label>
-                            <input type="text" class="form-control" />
-                        </div>
-                        <div class="col-12">
-                            <label for="">içerik</label>
-                            <textarea name="" id="" class="form-control" rows="10"></textarea>
+            <div class="col-sm-12 col-md-2">
+                <div class="nav flex-column message-nav-container nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link message-nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                        <i class="fal fa-envelope"></i>Gelen Mesajlar
+                    </a>
+                    <a class="nav-link message-nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <i class="fal fa-trash"></i>Silinen Mesajlar
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-10">
+                <div class="tab-content message-content-container" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <div class="d-flex">
+                            <div class="messages col-3">
+
+                                <div class="message active-message">
+                                    <div class="message-head">
+                                        <div class="">
+                                            <h5 class="mr-auto">Başlık</h5>
+                                            <small>09.10.2019</small>
+                                        </div>
+                                        <label class="message-from">Lorem ipsum dolor sit amet</label>
+                                    </div>
+                                    <div class="message-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </div>
+                                </div>
+
+
+                                <div class="message unread-message">
+                                    <div class="message-head">
+                                        <div class="">
+                                            <h5 class="mr-auto">Başlık</h5>
+                                            <small>09.10.2019</small>
+                                        </div>
+                                        <label class="message-from">Lorem ipsum dolor sit amet</label>
+                                    </div>
+                                    <div class="message-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </div>
+                                </div>
+                                <div class="message read-message">
+                                    <div class="message-head">
+                                        <div class="">
+                                            <h5 class="mr-auto">Başlık</h5>
+                                            <small>09.10.2019</small>
+                                        </div>
+                                        <label class="message-from">Lorem ipsum dolor sit amet</label>
+                                    </div>
+                                    <div class="message-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </div>
+                                    <div class="message-footer">
+                                        <div class="read">
+                                            Mesaj Cevaplandı
+                                        </div>
+                                        Cevaplayan: Ahmet Emin ŞİT
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="col-9 bg-white">
+                                <div class="message-content">
+                                    <div class="message-header">
+                                        <div>
+                                            <h2 class="">Başlık Bilgisi</h2>
+                                            <label class="message-from">Gönderen Bilgisi</label>
+                                        </div>
+                                        <button class="ml-auto btn btn-success btn-sm">Cevapla</button>
+                                    </div>
+                                    <hr>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aut autem dicta esse et explicabo nam obcaecati qui quo reiciendis? Adipisci dolores enim eveniet
+                                        expedita id ipsam quisquam sequi unde. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet culpa debitis dolorem doloribus eaque eum facilis fugiat
+                                        laboriosam magnam, minus nisi officiis quaerat quam, quasi quis quisquam rerum similique sint?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur commodi
+                                        eius excepturi illum molestiae molestias nesciunt numquam quam, quia recusandae tenetur velit voluptate. Cum debitis explicabo in nam nisi omnis.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 mt-2">
-                    <button class="float-right btn btn-success">Kaydet</button>
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"><div class="d-flex">
+                        <div class="messages col-3">
+
+                            <div class="message read-message">
+                                <div class="message-head">
+                                    <div class="">
+                                        <h5 class="mr-auto">Başlık</h5>
+                                        <small>09.10.2019</small>
+                                    </div>
+                                    <label class="message-from">Lorem ipsum dolor sit amet</label>
+                                </div>
+                                <div class="message-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                </div>
+                                <div class="message-footer">
+                                    <div class="read">
+                                        Mesaj Cevaplandı
+                                    </div>
+                                    Cevaplayan: Ahmet Emin ŞİT
+                                </div>
+                            </div>
+                            <div class="message read-message">
+                                <div class="message-head">
+                                    <div class="">
+                                        <h5 class="mr-auto">Başlık</h5>
+                                        <small>09.10.2019</small>
+                                    </div>
+                                    <label class="message-from">Lorem ipsum dolor sit amet</label>
+                                </div>
+                                <div class="message-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                </div>
+                                <div class="message-footer">
+                                    <div class="read">
+                                        Mesaj Cevaplandı
+                                    </div>
+                                    Cevaplayan: Ahmet Emin ŞİT
+                                </div>
+                            </div>
+                            <div class="message read-message">
+                                <div class="message-head">
+                                    <div class="">
+                                        <h5 class="mr-auto">Başlık</h5>
+                                        <small>09.10.2019</small>
+                                    </div>
+                                    <label class="message-from">Lorem ipsum dolor sit amet</label>
+                                </div>
+                                <div class="message-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                </div>
+                                <div class="message-footer">
+                                    <div class="read">
+                                        Mesaj Cevaplandı
+                                    </div>
+                                    Cevaplayan: Ahmet Emin ŞİT
+                                </div>
+                            </div>
+                            <div class="message read-message">
+                                <div class="message-head">
+                                    <div class="">
+                                        <h5 class="mr-auto">Başlık</h5>
+                                        <small>09.10.2019</small>
+                                    </div>
+                                    <label class="message-from">Lorem ipsum dolor sit amet</label>
+                                </div>
+                                <div class="message-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                </div>
+                                <div class="message-footer">
+                                    <div class="read">
+                                        Mesaj Cevaplandı
+                                    </div>
+                                    Cevaplayan: Ahmet Emin ŞİT
+                                </div>
+                            </div>
+                            <div class="message read-message">
+                                <div class="message-head">
+                                    <div class="">
+                                        <h5 class="mr-auto">Başlık</h5>
+                                        <small>09.10.2019</small>
+                                    </div>
+                                    <label class="message-from">Lorem ipsum dolor sit amet</label>
+                                </div>
+                                <div class="message-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                </div>
+                                <div class="message-footer">
+                                    <div class="read">
+                                        Mesaj Cevaplandı
+                                    </div>
+                                    Cevaplayan: Ahmet Emin ŞİT
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-9 bg-white">
+                            <div class="message-content">
+                                <div class="message-header">
+                                    <div>
+                                        <h2 class="">Başlık Bilgisi</h2>
+                                        <label class="message-from">Gönderen Bilgisi</label>
+                                    </div>
+                                    <button class="ml-auto btn btn-success btn-sm">Cevapla</button>
+                                </div>
+                                <hr>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aut autem dicta esse et explicabo nam obcaecati qui quo reiciendis? Adipisci dolores enim eveniet
+                                    expedita id ipsam quisquam sequi unde. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet culpa debitis dolorem doloribus eaque eum facilis fugiat
+                                    laboriosam magnam, minus nisi officiis quaerat quam, quasi quis quisquam rerum similique sint?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur commodi
+                                    eius excepturi illum molestiae molestias nesciunt numquam quam, quia recusandae tenetur velit voluptate. Cum debitis explicabo in nam nisi omnis.</p>
+                            </div>
+                        </div>
+                    </div></div>
                 </div>
             </div>
         </div>
