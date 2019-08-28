@@ -1,0 +1,112 @@
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    /*background-color: #66bb6a;*/
+    color: #66bb6a;
+}
+
+.message-nav-link {
+    background-color: unset !important;
+    /*color: #66bb6a !important;*/
+}
+
+.message-nav-container {
+    border-radius: .5rem;
+    background-color: #fff !important;
+}
+
+.message-content-container {
+    border-radius: .5rem;
+    border: #d3d3d3 solid 1px;
+    width: 100%;
+}
+
+.messages {
+    background-color: #eaeaea;
+    padding: 1rem;
+    margin: 0 !important;
+    height: 42rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.msg-content {
+    height: 42rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.message {
+    border-radius: .8rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    padding: 1rem 2rem;
+}
+
+.active-message {
+    background-color: #66bb6a;
+    color: #fff;
+}
+
+.message-head > div {
+    display: flex;
+}
+
+.message-head label,
+.message-head small {
+    opacity: 0.6 !important;
+}
+
+.message-from {
+    margin-bottom: 1rem;
+}
+
+.message-head h5 {
+    margin: 0;
+}
+
+.unread-message {
+    border-left: #66bb6a solid 10px;
+}
+
+.read-message {
+    opacity: .8;
+}
+
+.message-footer {
+    margin-top: 1rem;
+    font-size: .8rem;
+    font-style: italic;
+}
+
+.read:before {
+    content: "\A";
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background: #66bb6a;
+    display: inline-block;
+    margin: 0;
+}
+
+.read {
+    color: #66bb6a;
+    font-style: normal;
+}
+
+.message-content {
+    margin: 1rem;
+    padding: 2rem;
+    width: 100%;
+    min-height: 24rem;
+}
+
+.message-header {
+    display: flex;
+}
+
+.message-content h2 {
+    margin: 0;
+}
+
+.message-content .message-from {
+    opacity: .5;
+}
