@@ -71,6 +71,12 @@
     opacity: .8;
 }
 
+.message-body{
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .message-footer {
     margin-top: 1rem;
     font-size: .8rem;
